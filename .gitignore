@@ -1,0 +1,41 @@
+# Environment & secrets
+.env
+storage/database.sqlite
+storage/logs/*
+storage/cache/*
+storage/uploads_tmp/*
+!storage/logs/.gitkeep
+!storage/cache/.gitkeep
+!storage/uploads_tmp/.gitkeep
+
+# Uploads
+public/uploads/*
+!public/uploads/.gitkeep
+
+# Legacy junk
+legacy/error_log
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Composer
+/vendor/
+composer.lock
+
+# Node
+node_modules/
+dist/
+build/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Backups
+*.zip
+*.tar.gz
+*.sql
+*.bak
