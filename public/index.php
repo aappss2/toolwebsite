@@ -1,9 +1,28 @@
 <?php
 // Front controller for PromptTai Tools
-require_once __DIR__ . '/../app/config/config.php';
+// Enable error display if debug
+ini_set('display_errors', 0);
+error_reporting(E_ALL);
 
-Security::setSecurityHeaders();
-Auth::initSession();
+try {
+    require_once __DIR__ . '/../app/config/config.php';
+    Security::setSecurityHeaders();
+    Auth::initSession();
+} catch (Throwable $e) {
+    // If config fails, show friendly error
+    if (defined('APP_DEBUG') && APP_DEBUG) {
+        http_response_code(500);
+        echo "<h1>Config Error</h1><pre>" . htmlspecialchars($e->getMessage() . "\n" . $e->getTraceAsString()) . "</pre>";
+        echo "<p>Check .env file exists and storage/ is writable (755)</p>";
+        exit;
+    } else {
+        error_log("Config error: " . $e->getMessage());
+        http_response_code(500);
+        include __DIR__ . '/500.html';
+        exit;
+    }
+}
+
 
 $uri = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
 $method = $_SERVER['REQUEST_METHOD'];
@@ -572,5 +591,28 @@ $router->get('/admin', function() {
     <?php include TEMPLATE_PATH . '/footer.php';
 });
 
-// Dispatch
-$router->dispatch();
+// Dispatch with error handling
+try {
+    $router->dispatch();
+} catch (Throwable $e) {
+    error_log("Router dispatch error: " . $e->getMessage() . " in " . $e->getFile() . ":" . $e->getLine());
+    if (defined('APP_DEBUG') && APP_DEBUG) {
+        http_response_code(500);
+        echo "<h1>500 - Internal Error</h1>";
+        echo "<p><strong>Message:</strong> " . htmlspecialchars($e->getMessage()) . "</p>";
+        echo "<p><strong>File:</strong> " . htmlspecialchars($e->getFile() . ":" . $e->getLine()) . "</p>";
+        echo "<pre>" . htmlspecialchars($e->getTraceAsString()) . "</pre>";
+        echo "<hr><p>Check: .env DB config, storage/ permissions 755, PHP version 8.2, mod_rewrite enabled</p>";
+        exit;
+    } else {
+        http_response_code(500);
+        // Try to show 500.html, fallback to simple message
+        if (file_exists(__DIR__ . '/500.html')) {
+            include __DIR__ . '/500.html';
+        } else {
+            echo "<h1>500 Internal Server Error</h1><p>Please check error logs. If just uploaded, ensure .env exists and storage/ writable.</p>";
+        }
+        exit;
+    }
+}
+
