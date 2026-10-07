@@ -1,2 +1,0 @@
-[18-Jan-2026 19:07:39 UTC] PHP Warning:  Unknown: Failed to open stream: No such file or directory in Unknown on line 0
-[18-Jan-2026 19:07:39 UTC] PHP Fatal error:  Failed opening required '/home/jdirocom/public_html/.755931854218511.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in Unknown on line 0

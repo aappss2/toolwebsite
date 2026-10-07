@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+Disallow: /admin
+Disallow: /api/
+Disallow: /account/
+Disallow: /storage/
+Disallow: /app/
+Disallow: /database/
+
+Sitemap: https://tool.prompttai.com/sitemap.xml

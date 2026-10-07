@@ -1,13 +1,41 @@
+# PromptTai Tools - Root .htaccess
+# Secure - removed external error redirects to earncolour.xyz
+# For cPanel: if document root is set to /public, this file is not needed
+# If document root is project root, rewrite to public
 
-# Redirect all 500 errors to earncolour.xyz
-ErrorDocument 500 https://earncolour.xyz/
-ErrorDocument 502 https://earncolour.xyz/
-ErrorDocument 503 https://earncolour.xyz/
-ErrorDocument 504 https://earncolour.xyz/
-
-# php -- BEGIN cPanel-generated handler, do not edit
-# Set the “ea-php82” package as the default “PHP” programming language.
 <IfModule mime_module>
   AddHandler application/x-httpd-ea-php82 .php .php8 .phtml
 </IfModule>
-# php -- END cPanel-generated handler, do not edit
+
+# Security headers
+<IfModule mod_headers.c>
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set X-Frame-Options "SAMEORIGIN"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+</IfModule>
+
+Options -Indexes
+
+# Protect sensitive files
+<FilesMatch "(\.env|config\.php|\.git|\.htaccess|composer\.json|composer\.lock)$">
+  Require all denied
+</FilesMatch>
+
+RewriteEngine On
+
+# If request is for public folder directly, serve it
+RewriteCond %{REQUEST_URI} ^/public/
+RewriteRule ^public/(.*)$ public/$1 [L]
+
+# Deny access to sensitive dirs from root
+RewriteRule ^(app|database|storage|legacy|docs)/ - [F,L]
+
+# Rewrite all to public/index.php if not existing file in public
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_URI} !^/public/
+RewriteRule ^(.*)$ public/index.php [QSA,L]
+
+# Local error docs, not external
+ErrorDocument 404 /public/index.php
+ErrorDocument 403 /public/index.php
