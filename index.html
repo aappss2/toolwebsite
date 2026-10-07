@@ -1,0 +1,584 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <title>JDIRO | Smart Tools, AI Utilities & 3D Tools Hub</title>
+  <meta name="description" content="JDIRO — Lightweight, fast glass-style UI with smart web tools, AI helpers (Gemini & GPT), and interactive 3D tool previews for students, teachers and office users.">
+  <meta name="keywords" content="JDIRO, AI tools, Gemini apps, GPT tools, online utilities, educational tools, productivity, 3D web tools, student tools, teacher tools, office utilities">
+  <meta name="author" content="JDIRO">
+  <link rel="canonical" href="https://jdiro.com/">
+  <!-- Open Graph -->
+  <meta property="og:title" content="JDIRO — Smart Tools & AI Utilities">
+  <meta property="og:description" content="Tools, AI helpers & learning — everything in one fast, 3D-enabled place.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://jdiro.com/">
+  <meta property="og:image" content="https://jdiro.com/assets/social-preview.png">
+<!-- Analytics & Ads --> 
+<script src="https://analytics.ahrefs.com/analytics.js" data-key="9od/359Suy/KTf8tOA1uWQ" async></script> 
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8977523182593956" crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-DPSML6XTSC"></script> 
+<script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-DPSML6XTSC'); </script>
+  <!-- AdSense (kept) -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8977523182593956"
+          crossorigin="anonymous"></script>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <!-- Three.js for hero -->
+  <script src="https://unpkg.com/three@0.153.0/build/three.min.js"></script>
+  <script src="https://unpkg.com/three@0.153.0/examples/js/controls/OrbitControls.js"></script>
+
+  <!-- Basic styling (glass UI + 3D) -->
+  <style>
+    :root{
+      --bg:#0e0f12;
+      --panel:#0f1720;
+      --muted:#94a3b8;
+      --accent:#5b8cff;
+      --accent-2:#60a5fa;
+      --hot1:#ef4444;
+      --hot2:#f97316;
+      --glass: rgba(255,255,255,0.04);
+      --glass-2: rgba(91,140,255,0.06);
+      --shadow: 0 10px 30px rgba(2,6,23,0.7);
+      --radius: 14px;
+      --maxw: 1200px;
+    }
+    html,body{height:100%;margin:0;font-family:Roboto,system-ui,-apple-system,"Segoe UI",Arial; -webkit-font-smoothing:antialiased;}
+    body{background: linear-gradient(180deg,var(--bg) 0%, #071126 100%); color:#e6eef8; line-height:1.45; -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;}
+    a{color:inherit}
+    .wrap{max-width:var(--maxw);margin:0 auto;padding:20px;}
+
+    /* Header (use provided default header layout, updated) */
+    header {
+      position: sticky; top:0; z-index:60;
+      display:flex; align-items:center; justify-content:space-between;
+      gap:20px; padding:10px 20px; backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
+      background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      border-bottom: 1px solid rgba(255,255,255,0.03); border-radius: 0 0 12px 12px;
+    }
+    .brand {display:flex;align-items:center;gap:14px}
+    .canvas-wrap { width:72px;height:72px;border-radius:18px;padding:6px;background:linear-gradient(135deg,rgba(255,255,255,0.02),rgba(255,255,255,0.01));box-shadow:var(--shadow);display:grid;place-items:center; }
+    canvas#logoCanvas{width:100%;height:100%;border-radius:12px;display:block}
+    .brand h1{font-size:1.05rem;margin:0;color:var(--accent);display:flex;align-items:center;gap:8px}
+    nav{display:flex;gap:14px;align-items:center}
+    nav a{color:#dbe9ff;text-decoration:none;font-weight:600;padding:8px 12px;border-radius:10px;transition:all .18s ease}
+    nav a:hover{color:var(--accent-2); transform: translateY(-3px)}
+    .cta{background: linear-gradient(90deg,var(--hot1), var(--hot2)); padding:8px 14px;border-radius:12px;color:#fff;font-weight:700}
+
+    /* Hero */
+    .hero { position: relative; display:grid; grid-template-columns: 1fr 420px; gap:28px; align-items:center; margin:18px 0; min-height:360px; }
+    @media (max-width:900px){ .hero{ grid-template-columns: 1fr; } }
+
+    .hero-left h2{ font-size:clamp(1.6rem,3.5vw,2.8rem); margin:0 0 8px; line-height:1.05; }
+    .hero-left p{ margin:0 0 14px; color:var(--muted) }
+    .controls{ display:flex; gap:12px; align-items:center; flex-wrap:wrap; }
+    .search { flex:1; min-width:180px; padding:12px 14px; border-radius:999px; border:1px solid transparent; background:#fff; color:#000; font-weight:500; }
+    .explore-btn{ padding:10px 14px; border-radius:999px; background:var(--panel); border:1px solid rgba(255,255,255,0.04); font-weight:700; cursor:pointer; color: #e6eef8; }
+
+    /* 3D hero panel */
+    .hero-card{ background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); border-radius:16px; padding:16px; box-shadow:var(--shadow); border:1px solid rgba(255,255,255,0.03); }
+    #hero3dWrap{ width:100%; height:320px; border-radius:12px; overflow:hidden; position:relative; background: linear-gradient(135deg,#051126 0%,#07223a 100%); }
+
+    /* Tools grid */
+    #toolGrid { display:grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap:16px; margin-top:20px; }
+    .tool { padding:16px; border-radius:12px; text-align:center; font-weight:700; cursor:pointer; border:1px solid transparent; background: linear-gradient(180deg, rgba(255,255,255,0.02), transparent); transition: transform .14s ease, box-shadow .14s ease; }
+    .tool:hover, .tool:focus { transform: translateY(-6px); box-shadow: 0 12px 30px rgba(0,0,0,0.45); outline:none; }
+    .category-title{ grid-column:1/-1; color:var(--accent); font-weight:800; margin-top:8px; }
+
+    /* Article + SEO block */
+    .content-area { display:grid; grid-template-columns: 1fr 360px; gap:20px; margin-top:28px; align-items:start; }
+    @media (max-width:1000px) { .content-area{ grid-template-columns:1fr } }
+    article.card { padding:20px; border-radius:12px; background:var(--panel); border:1px solid rgba(255,255,255,0.03); box-shadow:var(--shadow); }
+    aside.card { padding:16px; border-radius:12px; background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); border:1px solid rgba(255,255,255,0.03); }
+
+    /* FAQ */
+    .faq dt{ font-weight:700; margin-top:12px }
+    .faq dd{ margin:6px 0 12px; color:var(--muted) }
+
+    /* Footer */
+    footer{ text-align:center; margin:36px 0 12px; color:rgba(230,238,248,0.72) }
+
+    /* Responsive */
+    @media (max-width:640px){
+      header{ padding:10px; }
+      nav{ display:none; }
+      .mobile-controls{ display:flex; gap:8px; }
+      .hero { gap:14px; }
+      #hero3dWrap{ height:220px; }
+    }
+
+    /* Accessibility focus */
+    a:focus,button:focus,input:focus{ outline:3px solid rgba(99,102,241,0.12); outline-offset:3px; border-radius:8px; }
+  </style>
+</head>
+<body>
+  <!-- Header (Default header content adapted to page) -->
+  <header>
+    <div class="brand" aria-label="JIRO brand">
+      <div class="canvas-wrap" role="img" aria-hidden="false" aria-label="3D JIRO logo">
+        <canvas id="logoCanvas" tabindex="-1"></canvas>
+      </div>
+      <h1><span class="logo-emoji" aria-hidden="true">🛠</span> JIRO</h1>
+    </div>
+
+    <nav aria-label="Primary navigation">
+      <a href="https://jdiro.com/">Home</a>
+      <a href="https://jdiro.com/aboutus.html">About</a>
+      <a href="https://jdiro.com/contact-us.html">Contact</a>
+      <a href="https://jdiro.com/privacy-policy.html">Privacy</a>
+      <a href="https://jdiro.com/terms.html">Terms</a>
+      <a class="cta" href="https://jdiro.com/">Get Tools</a>
+    </nav>
+
+    <div class="mobile-controls" style="display:none;align-items:center">
+      <button id="modeToggle" title="Toggle dark/light" aria-pressed="false" class="tool" style="padding:8px 10px">🌗</button>
+      <button id="menuToggle" title="Open menu" aria-expanded="false" class="tool" style="padding:8px 10px">☰</button>
+    </div>
+  </header>
+
+  <main class="wrap" id="page">
+    <!-- Hero -->
+    <section class="hero" aria-labelledby="hero-heading">
+      <div class="hero-left">
+        <h2 id="hero-heading">Make life easy with <span style="color:var(--accent)">JDIRO</span></h2>
+        <p>Tools, AI helpers &amp; learning — everything in one place. Interactive 3D hero, glass UI, fast search, and curated Gemini/GPT apps for students, teachers and office workflows.</p>
+
+        <div class="controls" role="search" aria-label="Search tools">
+          <input id="searchInput" class="search" type="search" placeholder="🔍 Search tools..." aria-label="Search tools">
+          <button class="explore-btn" onclick="document.getElementById('toolGrid').scrollIntoView({behavior:'smooth'})">Explore Tools</button>
+        </div>
+
+        <!-- quick featured links -->
+        <div style="display:flex;gap:10px;margin-top:12px;flex-wrap:wrap">
+          <a href="https://ai.jdiro.com/JIRO-AI/index.html" class="tool" style="background:linear-gradient(90deg,#ef4444,#f97316);color:#fff;padding:10px 12px;text-decoration:none;border-radius:12px">Try JIRO-AI</a>
+          <a href="https://jdiro.com/AI%20APPS/Index.html" class="tool" style="padding:10px 12px;border-radius:12px">Open AI Apps</a>
+        </div>
+      </div>
+
+      <aside class="hero-card" aria-hidden="false">
+        <div id="hero3dWrap" aria-hidden="true"></div>
+        <div style="display:flex;gap:8px;align-items:center;margin-top:12px;justify-content:space-between">
+          <div>
+            <h3 style="margin:0 0 4px">🚀 Featured — JIRO AI</h3>
+            <p style="margin:0;color:var(--muted)">A personal AI assistant for studying, drafting and learning.</p>
+          </div>
+          <a href="https://ai.jdiro.com/JIRO-AI/index.html" class="explore-btn" style="align-self:center;text-decoration:none">Open</a>
+        </div>
+      </aside>
+    </section>
+
+<!-- ===== FEATURED AI APPS (Insert right after your <header>) ===== -->
+<section id="featured-ai-apps" aria-label="Featured AI Apps" style="max-width:1100px;margin:18px auto;padding:18px;border-radius:12px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));box-shadow:0 10px 30px rgba(2,6,23,0.7);">
+  <div style="display:flex;flex-direction:row;align-items:center;justify-content:space-between;gap:12px;">
+    <div>
+      <h2 style="margin:0;color:#5b8cff;font-size:1.3rem;">Featured — AI Apps (Gemini & GPT)</h2>
+      <p style="margin:6px 0 0;color:#94a3b8;max-width:680px;">Hand-picked AI tools for students, teachers and office work. Click a card to open the tool or visit the full AI Apps directory.</p>
+    </div>
+
+    <div style="display:flex;gap:10px;align-items:center">
+      <a href="https://jdiro.com/AI%20APPS/Index.html" class="jdiro-cta" style="background:linear-gradient(90deg,#ef4444,#f97316);color:#fff;padding:10px 14px;border-radius:10px;text-decoration:none;font-weight:700">Open AI Apps</a>
+    </div>
+  </div>
+
+  <div id="aiAppsPreview" style="margin-top:16px;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;"></div>
+
+  <!-- iframe fallback (hidden by default) -->
+  <div id="aiAppsIframeWrap" style="margin-top:12px;display:none;">
+    <iframe src="https://jdiro.com/AI%20APPS/Index.html" title="AI Apps Directory" style="width:100%;height:420px;border-radius:10px;border:1px solid rgba(255,255,255,0.03)"></iframe>
+  </div>
+</section>
+
+<style>
+  /* small local styles so this snippet is self-contained */
+  #featured-ai-apps .card {
+    background: #0f1720;
+    padding:12px;
+    border-radius:10px;
+    display:flex;
+    flex-direction:column;
+    gap:8px;
+    min-height:140px;
+    box-shadow:0 8px 20px rgba(2,6,23,0.6);
+    transition:transform .16s ease;
+  }
+  #featured-ai-apps .card:hover { transform:translateY(-6px); }
+  #featured-ai-apps .thumb { width:100%; height:110px; object-fit:cover; border-radius:8px; background:linear-gradient(135deg,#5b8cff,#60a5fa); }
+  #featured-ai-apps .meta { color:#94a3b8; font-size:0.9rem; }
+  @media (max-width:640px){
+    #featured-ai-apps { padding:12px; }
+    #featured-ai-apps .card { min-height:120px; }
+  }
+</style>
+
+<script>
+(function(){
+  const preview = document.getElementById('aiAppsPreview');
+  const iframeWrap = document.getElementById('aiAppsIframeWrap');
+  const TOOLS_URL = '/AI%20APPS/tools.json'; // exact path used by your AI APPS folder
+
+  // Render a single card
+  function renderCard(tool){
+    const div = document.createElement('article');
+    div.className = 'card';
+    const thumbHtml = tool.thumbnail ? `<img class="thumb" src="${tool.thumbnail}" alt="${escapeHtml(tool.title)} thumbnail">` : `<div class="thumb" aria-hidden="true"></div>`;
+    const desc = tool.description ? `<p class="meta" style="margin:6px 0 0">${escapeHtml(tool.description)}</p>` : '';
+    div.innerHTML = `
+      ${thumbHtml}
+      <div style="display:flex;justify-content:space-between;align-items:flex-end;gap:10px;">
+        <div>
+          <strong style="display:block">${escapeHtml(tool.title)}</strong>
+          <div class="meta" aria-hidden="false">${escapeHtml(tool.category || tool.provider || '')}</div>
+        </div>
+        <div style="text-align:right">
+          <a href="${tool.link}" target="_blank" rel="noopener noreferrer" style="display:inline-block;padding:8px 10px;border-radius:8px;background:linear-gradient(90deg,#5b8cff,#60a5fa);color:#fff;text-decoration:none;font-weight:700">Open</a>
+        </div>
+      </div>
+      ${desc}
+    `;
+    return div;
+  }
+
+  // Escape helper to avoid accidental injection when rendering JSON fields
+  function escapeHtml(s){
+    if(!s) return '';
+    return String(s)
+      .replace(/&/g,'&amp;')
+      .replace(/</g,'&lt;')
+      .replace(/>/g,'&gt;')
+      .replace(/"/g,'&quot;')
+      .replace(/'/g,'&#39;');
+  }
+
+  // Try to fetch tools.json and show up to 4 published apps
+  fetch(TOOLS_URL + '?_=' + Date.now(), {cache: 'no-store'}).then(res=>{
+    if(!res.ok) throw new Error('tools.json not available');
+    return res.json();
+  }).then(arr=>{
+    if(!Array.isArray(arr) || arr.length === 0) throw new Error('no tools');
+    // filter published and pick top 4 (most recent)
+    const published = arr.filter(t => (t.status||'').toLowerCase() === 'published');
+    if(published.length === 0) throw new Error('no published apps');
+    published.sort((a,b) => (b.publishedAt||0) - (a.publishedAt||0));
+    const top = published.slice(0,4);
+    preview.innerHTML = '';
+    top.forEach(t => preview.appendChild(renderCard(t)));
+    // if fewer than 4, still ok
+  }).catch(err=>{
+    // if fetch fails, show iframe fallback for interactive preview
+    console.warn('Featured AI Apps: fetch failed, showing iframe. ', err);
+    preview.style.display = 'none';
+    iframeWrap.style.display = 'block';
+  });
+})();
+</script>
+<!-- ===== END FEATURED AI APPS ===== -->
+
+
+    <!-- small top ad -->
+    <div style="margin:18px 0" aria-hidden="true">
+      <ins class="adsbygoogle"
+           style="display:block"
+           data-ad-client="ca-pub-8977523182593956"
+           data-ad-slot="1415325571"
+           data-ad-format="auto"
+           data-full-width-responsive="true"></ins>
+    </div>
+
+    <!-- Tools grid (populated by tools.json) -->
+    <main id="toolGrid" aria-live="polite" aria-label="Tools list">
+      <div id="loading" style="color:var(--muted);">Loading tools…</div>
+    </main>
+
+    <!-- content + sidebar -->
+    <div class="content-area" style="margin-top:26px;">
+      <!-- SEO article: 1000 words (approx) -- optimized for keywords -->
+      <article class="card" id="seoArticle" aria-labelledby="articleTitle">
+        <h2 id="articleTitle">JDIRO — Smart online tools, AI helpers and 3D learning utilities</h2>
+        <p style="color:var(--muted);margin-top:6px">A practical guide to using JDIRO tools for study, office work and teaching — built for speed, clarity and modern web performance.</p>
+
+        <!-- BEGIN long SEO article (~1000 words) -->
+        <div style="margin-top:12px;color:#dbe9ff">
+<p><strong>Introduction —</strong> The web is full of scattered utilities—calculators, converters, generators and AI assistants—but few organize them with clarity, speed and accessibility. JDIRO centralizes powerful online tools and AI apps (including Gemini & GPT-powered helpers) into one glass-style hub. Whether you're a student preparing notes, a teacher creating worksheets, or an office user streamlining tasks, JDIRO focuses on usability and performance.</p>
+
+<p><strong>Why JDIRO?</strong> JDIRO was designed with three priorities in mind: <em>speed</em>, <em>clarity</em>, and <em>modern interaction</em>. Each tool is a single-page web utility with a compact footprint, ensuring quick load times. The UI uses glass panels and subtle 3D motion for context and delight while staying battery-friendly and accessible on mobile devices.</p>
+
+<p><strong>For students:</strong> Tools such as grid paper generators, ID photo layout, converters, and AI summarizers help reduce repetitive work. Use JDIRO’s grid and printable tools for assignments, the AI helpers for study notes, and the chart generator to visualize data quickly.</p>
+
+<p><strong>For teachers:</strong> Quickly assemble worksheets, design activity pages with printable grid or lined templates, and use AI prompts to create lesson plans or assessment questions. JDIRO’s admin and index features let teachers publish curated tool collections for classes.</p>
+
+<p><strong>For office users:</strong> Convert units, generate charts for reports, merge images into PDFs and use the writing assistants for drafting emails, meeting minutes, and documentation. The tools are built to integrate into workflows quickly.</p>
+
+<p><strong>Design & performance:</strong> JDIRO uses optimized static assets and a lightweight JavaScript layer that fetches tool metadata (tools.json) and renders fast, responsive UI. The 3D hero is purely decorative and low-cost — built with Three.js and tuned for performance; it uses low poly shapes and limits animation frame rates on mobile.</p>
+
+<p><strong>Privacy & Ads:</strong> The site balances a lightweight privacy-first approach with necessary monetization. Ads are placed non-intrusively (top and bottom), and where possible, we load them asynchronously. Sensitive tasks like file uploads happen client-side and are not stored unless the user explicitly chooses to export or save results.</p>
+
+<p><strong>How to use:</strong> Start by searching for a tool using the search box above. Click any tool tile to open it in a new tab. Use the admin interface (linked in the AI Apps directory) to add thumbnails, publication status, categories, and short descriptions for each tool entry. Tools can be featured on the index for easy discovery.</p>
+
+<p><strong>Tips for best results:</strong> • Use the mobile-friendly view for touch devices; the UI adapts seamlessly. • Prefer modern browsers (Chrome/Edge/Firefox/Safari) for full 3D support. • For printable assets, use the 'Print' button inside tools to ensure a clean layout.</p>
+
+<p><strong>Future roadmap:</strong> JDIRO will continue to add curated Gemini and GPT integrations, collaborative features for classroom sharing, offline export for printable assets, and a polished admin console to manage and promote tools.</p>
+
+<p><strong>Conclusion:</strong> JDIRO is more than a collection of utilities—it's a lightweight toolkit for everyday learning and productive workflows. The focus is on practical, fast, accessible tools that feel modern and work reliably. Start by exploring the AI apps and tools grid above — find something useful in 30 seconds or less.</p>
+        </div>
+        <!-- END article -->
+      </article>
+
+      <!-- sidebar: tags, keywords, FAQ -->
+      <aside class="card" aria-labelledby="sidebarTitle">
+        <h3 id="sidebarTitle" style="margin:0 0 8px">Quick info</h3>
+
+        <div style="margin-bottom:12px">
+          <strong>Keywords</strong>
+          <p style="margin:6px 0 0;color:var(--muted)">JDIRO, AI tools, Gemini apps, GPT, online utilities, 3D web tools</p>
+        </div>
+
+        <div style="margin-bottom:12px">
+          <strong>Tags</strong>
+          <p style="margin:6px 0 0;color:var(--muted)">education, productivity, ai, tools, printable, developer</p>
+        </div>
+
+        <div>
+          <strong>FAQ</strong>
+          <dl class="faq" style="margin-top:8px">
+            <dt>How do I add a new tool?</dt>
+            <dd>Use the admin JSON (tools.json) in your AI APPS folder; set the tool entry to status "published". The index pulls published tools automatically.</dd>
+
+            <dt>Are tools free to use?</dt>
+            <dd>Most JDIRO tools are free. Some AI features may require external API costs if enabled.</dd>
+
+            <dt>How to make a tool featured?</dt>
+            <dd>Set "featured": true in the tool metadata and add a thumbnail entry; the featured gallery will show it.</dd>
+          </dl>
+        </div>
+      </aside>
+    </div>
+
+    <!-- Multiplex ad (bottom of page) -->
+    <div style="margin-top:22px" aria-hidden="true">
+      <!-- Multiplex ad code (placed at bottom) -->
+      <ins class="adsbygoogle"
+           style="display:block"
+           data-ad-format="autorelaxed"
+           data-ad-client="ca-pub-8977523182593956"
+           data-ad-slot="2636907907"></ins>
+    </div>
+
+    <footer>
+      <p>© JDIRO | Built with ❤️</p>
+    </footer>
+  </main>
+
+  <!-- JSON-LD for FAQ (structured data) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {"@type":"Question","name":"How do I add a new tool?","acceptedAnswer":{"@type":"Answer","text":"Use the admin JSON (tools.json) in your AI APPS folder; set the tool entry to status 'published'. The index pulls published tools automatically."}},
+      {"@type":"Question","name":"Are tools free to use?","acceptedAnswer":{"@type":"Answer","text":"Most JDIRO tools are free. Some AI features may require external API costs if enabled."}},
+      {"@type":"Question","name":"How to make a tool featured?","acceptedAnswer":{"@type":"Answer","text":"Set 'featured': true in the tool metadata and add a thumbnail entry; the featured gallery will show it."}}
+    ]
+  }
+  </script>
+
+  <!-- Tiny JS: logo canvas, hero 3D, tools loader, search, ads init -->
+  <script>
+  // Init AdSense units (try-catch to avoid errors if blocked)
+  try { (adsbygoogle = window.adsbygoogle || []).push({}); } catch(e){}
+
+  // Small 3D rotating logo for header canvas (low cost)
+  (function logoCanvas(){
+    const canvas = document.getElementById('logoCanvas');
+    if(!canvas) return;
+    const w = canvas.clientWidth, h = canvas.clientHeight;
+    canvas.width = w * devicePixelRatio;
+    canvas.height = h * devicePixelRatio;
+    const ctx = canvas.getContext('2d');
+    let t = 0;
+    function draw(){
+      t += 0.02;
+      ctx.clearRect(0,0,canvas.width,canvas.height);
+      ctx.save();
+      ctx.scale(devicePixelRatio,devicePixelRatio);
+      // background gloss
+      ctx.fillStyle = 'rgba(91,140,255,0.08)';
+      ctx.roundRect = ctx.roundRect || function(x,y,w,h,r){ ctx.beginPath(); ctx.moveTo(x+r,y); ctx.arcTo(x+w,y,x+w,y+h,r); ctx.arcTo(x+w,y+h,x,y+h,r); ctx.arcTo(x,y+h,x,y,r); ctx.arcTo(x,y,x+w,y,r); ctx.closePath(); ctx.fill();};
+      ctx.roundRect(2,2,w-4,h-4,10);
+      // rotating cross
+      ctx.translate(w/2, h/2);
+      ctx.rotate(t);
+      ctx.fillStyle = '#5B8CFF';
+      ctx.fillRect(-6,-36,12,72);
+      ctx.fillRect(-36,-6,72,12);
+      ctx.restore();
+      requestAnimationFrame(draw);
+    }
+    draw();
+  })();
+
+  // Low-cost Three.js hero (low poly box + gentle rotation)
+  (function hero3D(){
+    const wrap = document.getElementById('hero3dWrap');
+    if(!wrap || !window.THREE) return;
+    const scene = new THREE.Scene();
+    const camera = new THREE.PerspectiveCamera(40, wrap.clientWidth / wrap.clientHeight, 0.1, 100 );
+    camera.position.set(0,0,6);
+    const renderer = new THREE.WebGLRenderer({antialias:true, alpha:true});
+    renderer.setPixelRatio(window.devicePixelRatio || 1);
+    renderer.setSize(wrap.clientWidth, wrap.clientHeight);
+    renderer.setClearColor(0x000000, 0); // transparent
+    wrap.appendChild(renderer.domElement);
+    // Lights
+    const dir = new THREE.DirectionalLight(0x88aaff, 1.0);
+    dir.position.set(5,5,5);
+    scene.add(dir);
+    scene.add(new THREE.AmbientLight(0x30364a, 0.8));
+    // Geometry: low poly J cube group
+    const group = new THREE.Group();
+    const mat = new THREE.MeshStandardMaterial({ color: 0x5b8cff, metalness:0.25, roughness:0.4, emissive:0x072244, emissiveIntensity:0.1 });
+    for(let i=-1;i<=1;i++){
+      const box = new THREE.Mesh(new THREE.BoxGeometry(1.6,1.6,1.6), mat);
+      box.position.x = i * 1.8;
+      box.rotation.y = i * 0.2;
+      group.add(box);
+    }
+    scene.add(group);
+    // responsive
+    window.addEventListener('resize', ()=> {
+      renderer.setSize(wrap.clientWidth, wrap.clientHeight);
+      camera.aspect = wrap.clientWidth / wrap.clientHeight;
+      camera.updateProjectionMatrix();
+    }, {passive:true});
+
+    let last = 0;
+    function animate(now){
+      // throttle frame rate a bit on mobile
+      if(!last) last = now;
+      const dt = now - last;
+      if(dt < (1000/40)) { requestAnimationFrame(animate); return; } // ~40fps cap
+      last = now;
+      group.rotation.y += 0.007;
+      group.rotation.x = Math.sin(now*0.0006) * 0.04;
+      renderer.render(scene, camera);
+      requestAnimationFrame(animate);
+    }
+    requestAnimationFrame(animate);
+  })();
+
+  // Tools loader: expects tools.json in same folder or root; builds grid and featured preview
+  (function loadTools(){
+    fetch('tools.json').then(r=>r.json()).then(tools=>{
+      const grid = document.getElementById('toolGrid');
+      grid.innerHTML = ''; // clear loading
+      const catOrder = Object.create(null);
+      // featured preview container
+      const preview = document.getElementById('aiAppsPreview');
+      preview.innerHTML = '';
+      // Group by category
+      const cats = {};
+      tools.forEach(tool=>{
+        if(tool.status !== 'published') return;
+        const c = tool.category || 'General';
+        cats[c] = cats[c]||[];
+        cats[c].push(tool);
+        // featured cards
+        if(tool.featured){
+          const card = document.createElement('a');
+          card.href = tool.link;
+          card.target = '_blank';
+          card.className = 'tool';
+          card.style.textDecoration = 'none';
+          card.innerHTML = `<div style="font-weight:800">${tool.title}</div><div style="font-size:0.9rem;color:${getComputedStyle(document.documentElement).getPropertyValue('--muted')};margin-top:6px">${tool.short || ''}</div>`;
+          preview.appendChild(card);
+        }
+      });
+      // populate grid with categories
+      Object.keys(cats).forEach(category=>{
+        const t = document.createElement('div');
+        t.className = 'category-title';
+        t.textContent = category;
+        grid.appendChild(t);
+        cats[category].forEach(tool => {
+          const el = document.createElement('a');
+          el.href = tool.link;
+          el.target = '_blank';
+          el.className = 'tool';
+          el.innerHTML = `<div>${tool.title}</div><div style="font-size:0.9rem;color:var(--muted);font-weight:500;margin-top:8px">${tool.short || ''}</div>`;
+          grid.appendChild(el);
+        });
+      });
+      // if none published
+      if(grid.children.length === 0){
+        grid.innerHTML = '<div class="muted">No tools published yet. Use tools.json to add entries.</div>';
+      }
+    }).catch(err=>{
+      const grid = document.getElementById('toolGrid');
+      grid.innerHTML = '<div style="color:var(--muted)">Tools load error. Check tools.json or console.</div>';
+      console.error('tools.json error', err);
+    });
+  })();
+
+  // Search filter
+  document.getElementById('searchInput').addEventListener('input', function(){
+    const q = this.value.trim().toLowerCase();
+    document.querySelectorAll('#toolGrid .tool').forEach(card=>{
+      const txt = card.textContent.toLowerCase();
+      const visible = !q || txt.includes(q);
+      card.style.display = visible ? '' : 'none';
+    });
+  });
+
+  // Mobile menu + dark toggle basic wiring
+  (function navControls(){
+    const mt = document.getElementById('menuToggle');
+    const body = document.body;
+    if(mt){
+      mt.addEventListener('click', ()=> {
+        const expanded = mt.getAttribute('aria-expanded') === 'true';
+        mt.setAttribute('aria-expanded', String(!expanded));
+        // simple show/hide nav
+        const nav = document.querySelector('nav');
+        if(nav) nav.style.display = (nav.style.display === 'none' || !nav.style.display) ? 'flex' : 'none';
+      });
+    }
+    const mode = document.getElementById('modeToggle');
+    if(mode){
+      mode.addEventListener('click', ()=> {
+        const pressed = mode.getAttribute('aria-pressed') === 'true';
+        mode.setAttribute('aria-pressed', String(!pressed));
+        document.body.classList.toggle('light');
+      });
+    }
+  })();
+
+  </script>
+
+  <!-- tiny polyfill for canvas roundRect used earlier in logo draw (non-blocking) -->
+  <script>
+    (function(){
+      const ctx = HTMLCanvasElement.prototype.getContext;
+      // ensure roundRect exists as used above
+      const c = document.createElement('canvas').getContext('2d');
+      if(!c.roundRect){
+        CanvasRenderingContext2D.prototype.roundRect = function(x,y,w,h,r){
+          if (w < 2 * r) r = w / 2;
+          if (h < 2 * r) r = h / 2;
+          this.beginPath();
+          this.moveTo(x+r, y);
+          this.arcTo(x+w, y, x+w, y+h, r);
+          this.arcTo(x+w, y+h, x, y+h, r);
+          this.arcTo(x, y+h, x, y, r);
+          this.arcTo(x, y, x+w, y, r);
+          this.closePath();
+          this.fill();
+        };
+      }
+    })();
+  </script>
+
+  <!-- End body -->
+</body>
+</html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Terms of Service | JIRO</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Terms of Service for JIRO – rules, conditions, and disclaimers for using our web tools and services." />
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <!-- Three.js + GSAP for 3D background -->
+  <script src="https://unpkg.com/three@0.153.0/build/three.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      background: linear-gradient(180deg,#0f172a 0%, #071126 100%);
+      color: #e6eef8;
+      -webkit-font-smoothing: antialiased;
+    }
+    .glass {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.08);
+      backdrop-filter: blur(8px) saturate(140%);
+      -webkit-backdrop-filter: blur(8px) saturate(140%);
+      box-shadow: 0 8px 30px rgba(2,6,23,0.6);
+      border-radius: 12px;
+    }
+    .tilt-card {
+      transform-style: preserve-3d;
+      transition: transform 250ms ease, box-shadow 250ms;
+      will-change: transform;
+      perspective: 1000px;
+    }
+    .tilt-card:hover {
+      box-shadow: 0 20px 40px rgba(2,6,23,0.6);
+    }
+    #heroCanvas {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+      width: 100%;
+      height: 300px;
+      pointer-events: none;
+    }
+  </style>
+</head>
+
+<body class="bg-gray-900">
+
+  <!-- HERO Background -->
+  <canvas id="heroCanvas" aria-hidden="true"></canvas>
+
+  <!-- 3D Header -->
+  <header class="relative z-10 glass max-w-6xl mx-auto flex items-center justify-between px-4 py-3 mt-3">
+    <h1 class="text-2xl font-bold text-white">🛠 JIRO</h1>
+    <nav class="flex items-center gap-6 font-semibold text-white">
+      <a class="nav-link hover:text-yellow-400" href="https://jdiro.com/">Home</a>
+      <a class="nav-link hover:text-yellow-400" href="https://jdiro.com/aboutus.html">About Us</a>
+      <a class="nav-link hover:text-yellow-400" href="https://jdiro.com/contact-us.html">Contact Us</a>
+      <a class="nav-link hover:text-yellow-400" href="https://jdiro.com/privacy-policy.html">Privacy Policy</a>
+      <a class="nav-link hover:text-yellow-400" href="https://jdiro.com/terms.html">Terms</a>
+    </nav>
+  </header>
+
+  <!-- Page Content -->
+  <main class="relative z-10 max-w-4xl mx-auto mt-10 px-4">
+    <div class="glass p-8 rounded-2xl tilt-card">
+      <h1 class="text-3xl font-bold text-yellow-400 mb-4">Terms of Service</h1>
+      <p class="text-sm text-gray-400 mb-6">Effective date: August 24, 2025</p>
+
+      <p>Welcome to JIRO. Please read these Terms of Service ("Terms") carefully before using our website and tools. By accessing or using JIRO (“we”, “our”, or “us”) and its services, you agree to these Terms. If you do not agree with these Terms, you may not use the website or its services.</p>
+
+      <h2 class="text-xl font-semibold text-blue-400 mt-6 mb-2">1. Use of Services</h2>
+      <ul class="list-disc ml-6 space-y-2">
+        <li>JIRO and its tools are intended for lawful personal, educational, or business use only.</li>
+        <li>You agree not to misuse, disrupt, or attempt to gain unauthorized access to our systems.</li>
+        <li>Some services may have additional terms or guidelines.</li>
+      </ul>
+
+      <h2 class="text-xl font-semibold text-blue-400 mt-6 mb-2">2. User Content</h2>
+      <ul class="list-disc ml-6 space-y-2">
+        <li>You retain ownership of any text, files, data, or content you submit.</li>
+        <li>Do not upload or share unlawful, harmful, or infringing content.</li>
+        <li>We respect your privacy and only use your input as needed to operate the service.</li>
+      </ul>
+
+      <h2 class="text-xl font-semibold text-blue-400 mt-6 mb-2">3. Intellectual Property</h2>
+      <p>All website content, design, branding, and tools are the intellectual property of JIRO or its licensors and may not be copied, reproduced, or redistributed without permission.</p>
+
+      <h2 class="text-xl font-semibold text-blue-400 mt-6 mb-2">4. Disclaimers</h2>
+      <ul class="list-disc ml-6 space-y-2">
+        <li>Our services are provided on an “as is” basis without guarantees.</li>
+        <li>Your use of our tools is at your own risk.</li>
+        <li>We disclaim liability for any damages arising from use.</li>
+      </ul>
+
+      <h2 class="text-xl font-semibold text-blue-400 mt-6 mb-2">5. Changes to These Terms</h2>
+      <p>We may update or change these Terms at any time. Continued use of the website means you accept the updated Terms.</p>
+
+      <h2 class="text-xl font-semibold text-blue-400 mt-6 mb-2">6. Termination</h2>
+      <p>We reserve the right to suspend or terminate access if you breach these Terms.</p>
+
+      <h2 class="text-xl font-semibold text-blue-400 mt-6 mb-2">7. Links and Third-Party Services</h2>
+      <p>JIRO may contain links to external websites or services. We are not responsible for their content or practices.</p>
+
+      <h2 class="text-xl font-semibold text-blue-400 mt-6 mb-2">8. Governing Law</h2>
+      <p>These Terms are governed by the laws of the jurisdiction in which JIRO operates.</p>
+
+      <h2 class="text-xl font-semibold text-blue-400 mt-6 mb-2">9. Contact</h2>
+      <p>If you have questions, contact us at <a href="mailto:admin@jdiro.com" class="text-yellow-400 hover:underline">admin@jdiro.com</a>.</p>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="relative z-10 mt-10 py-6 text-center text-gray-400 text-sm">
+    © 2025 JIRO. All rights reserved.
+  </footer>
+
+  <!-- Hero BG Animation -->
+  <script>
+    const canvas = document.getElementById('heroCanvas');
+    const renderer = new THREE.WebGLRenderer({ canvas, antialias:true, alpha:true });
+    renderer.setSize(canvas.clientWidth, canvas.clientHeight, false);
+    const scene = new THREE.Scene();
+    const camera = new THREE.PerspectiveCamera(45, canvas.clientWidth/canvas.clientHeight, 0.1, 100);
+    camera.position.z = 20;
+    const light = new THREE.PointLight(0xffffff, 1); light.position.set(10,10,10); scene.add(light);
+
+    const geom = new THREE.SphereGeometry(3,32,32);
+    const mat = new THREE.MeshStandardMaterial({ color:0x5b8cff, roughness:0.3, metalness:0.1 });
+    const sphere = new THREE.Mesh(geom, mat);
+    scene.add(sphere);
+
+    function animate(t){
+      requestAnimationFrame(animate);
+      sphere.rotation.y = t*0.0003;
+      renderer.render(scene,camera);
+    }
+    animate();
+  </script>
+</body>
+</html>

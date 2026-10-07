@@ -1,0 +1,1088 @@
+[
+    {
+        "title": "\ud83d\ude80 J1RO-AI (Chat with AI)",
+        "link": "https:\/\/ai.jdiro.com\/\/JIRO-AI\/\/index.html",
+        "category": "\ud83e\udd16 AI Tools",
+        "status": "published"
+    },
+    {
+        "title": "JIRO-AI GRAMMAR FIXER",
+        "link": "https:\/\/ai.jdiro.com\/\/ai-grammar-fixer\/\/index.html",
+        "category": "\ud83e\udd16 AI Tools",
+        "status": "published"
+    },
+    {
+        "title": "JIRO-AI Summarizer",
+        "link": "https:\/\/ai.jdiro.com\/\/ai-content-summarizer.html",
+        "category": "\ud83e\udd16 AI Tools",
+        "status": "published"
+    },
+    {
+        "title": "JIRO-AI QUESTION PAPER GENERATOR",
+        "link": "https:\/\/ai.jdiro.com\/\/ai-question-paper.html",
+        "category": "\ud83e\udd16 AI Tools",
+        "status": "published"
+    },
+    {
+        "title": "JIRO-AI EMAIL WRITER",
+        "link": "https:\/\/ai.jdiro.com\/\/ai-email-writer.html",
+        "category": "\ud83e\udd16 AI Tools",
+        "status": "published"
+    },
+    {
+        "title": "JIRO-AI LETTER WRITER",
+        "link": "https:\/\/ai.jdiro.com\/\/ai-letter-writer.html",
+        "category": "\ud83e\udd16 AI Tools",
+        "status": "published"
+    },
+    {
+        "title": "JIRO-AI APPLICATION WRITER",
+        "link": "https:\/\/ai.jdiro.com\/\/ai-application-writer.html",
+        "category": "\ud83e\udd16 AI Tools",
+        "status": "published"
+    },
+    {
+        "title": "JIRO-AI RESUME BUILDER",
+        "link": "https:\/\/ai.jdiro.com\/\/ai-resume-builder.html",
+        "category": "\ud83e\udd16 AI Tools",
+        "status": "published"
+    },
+    {
+        "title": "AI Essay & Assignment Writer",
+        "link": "https:\/\/ai.jdiro.com\/\/AI-Essay-Assignment-Writer\/\/index.html",
+        "category": "\ud83e\udd16 AI Tools",
+        "status": "published"
+    },
+    {
+        "title": "ENGLISH SPEAKING TUTOR",
+        "link": "https:\/\/ai.jdiro.com\/\/ENGLISH\/\/ai-english-speaking-tutor.html",
+        "category": "\ud83e\udd16 AI Tools",
+        "status": "published"
+    },
+    {
+        "title": "Base64 Encoder \/ Decoder",
+        "link": "base64-encoder-decoder",
+        "category": "UTILITY TOOLS",
+        "status": "published"
+    },
+    {
+        "title": "Link Status Checker",
+        "link": "link-status-checker\/index.php",
+        "category": "UTILITY TOOLS",
+        "status": "published"
+    },
+    {
+        "title": "Video Converter",
+        "link": "video-converter-app\/index.html",
+        "category": "Audio & Video Tools",
+        "status": "published"
+    },
+    {
+        "title": "Z-SCORE CALCULATOR",
+        "link": "z-score-calculator\/index.html",
+        "category": "CALCULATOR",
+        "status": "published"
+    },
+    {
+        "title": "TEXT EDITOR APP",
+        "link": "Text Editor App\/index.html",
+        "category": "UTILITY TOOLS",
+        "status": "published"
+    },
+    {
+        "title": "AGE CALCULATOR",
+        "link": "Utility Tools\/Age-Calculator.html",
+        "category": "CALCULATOR",
+        "status": "published"
+    },
+    {
+        "title": "Time Zone Converter",
+        "link": "Utility Tools\/time-zone-converter.html",
+        "category": "UTILITY TOOLS",
+        "status": "published"
+    },
+    {
+        "title": "Countdown Timer \/ Stopwatch",
+        "link": "Utility Tools\/Countdown-Timer-Stopwatch.html",
+        "category": "UTILITY TOOLS",
+        "status": "published"
+    },
+    {
+        "title": "LOAN EMI CALCULATOR",
+        "link": "Utility Tools\/LOAN-EMI-CALCULATOR.html",
+        "category": "CALCULATOR",
+        "status": "published"
+    },
+    {
+        "title": "Mortgage-Calculator",
+        "link": "Utility Tools\/Mortgage-Calculator.html",
+        "category": "CALCULATOR",
+        "status": "published"
+    },
+    {
+        "title": "COMPOUND INTEREST CALCULATOR",
+        "link": "Utility Tools\/compound-interest-calculator.html",
+        "category": "CALCULATOR",
+        "status": "published"
+    },
+    {
+        "title": "IP Address Finder \/ Tracker",
+        "link": "Utility Tools\/IP-Address-Finder-Tracker",
+        "category": "UTILITY TOOLS",
+        "status": "published"
+    },
+    {
+        "title": "CALORIE CALCULATOR",
+        "link": "Utility Tools\/calorie-calculator.html",
+        "category": "CALCULATOR",
+        "status": "published"
+    },
+    {
+        "title": "SIMPLE INTEREST",
+        "link": "Utility Tools\/simple-interest.html",
+        "category": "CALCULATOR",
+        "status": "published"
+    },
+    {
+        "title": "SALARY CALCULATOR",
+        "link": "Utility Tools\/Salary-Calculator.html",
+        "category": "CALCULATOR",
+        "status": "published"
+    },
+    {
+        "title": "INDIA INCOME TAX CALCULATOR",
+        "link": "Utility Tools\/income-tax-calculator.html",
+        "category": "CALCULATOR",
+        "status": "published"
+    },
+    {
+        "title": "SIP CALCULATOR",
+        "link": "Utility Tools\/Sip-Calculator.html",
+        "category": "CALCULATOR",
+        "status": "published"
+    },
+    {
+        "title": "GST CALCUATOR",
+        "link": "Utility Tools\/Gst-Calculator.html",
+        "category": "CALCULATOR",
+        "status": "published"
+    },
+    {
+        "title": "US INCOME TAX CALCULATOR",
+        "link": "Utility Tools\/us-income-tax-calculator.html",
+        "category": "CALCULATOR",
+        "status": "published"
+    },
+    {
+        "title": "Scientific Calculator",
+        "link": "Scientific Calculator\/index.html",
+        "category": "CALCULATOR",
+        "status": "published"
+    },
+    {
+        "title": "GPA \/ CGPA Calculator",
+        "link": "Educational Tools\/GPA&CGPA-Calculator.html",
+        "category": "CALCULATOR",
+        "status": "published"
+    },
+    {
+        "title": "Percentage Calculator",
+        "link": "Educational Tools\/percentage-calculator.html",
+        "category": "CALCULATOR",
+        "status": "published"
+    },
+    {
+        "title": "PERIODIC TABLE",
+        "link": "Educational Tools\/Periodic-Table.html",
+        "category": "\ud83d\udcda Educational Tools",
+        "status": "published"
+    },
+    {
+        "title": "MATRIX CALCULATOR",
+        "link": "Educational Tools\/matrix-calculator.html",
+        "category": "CALCULATOR",
+        "status": "published"
+    },
+    {
+        "title": "Graph Plotter",
+        "link": "Educational Tools\/graph-plotter.html",
+        "category": "\ud83d\udcda Educational Tools",
+        "status": "published"
+    },
+    {
+        "title": "Chemical Equation Balancer",
+        "link": "Educational Tools\/chemical-equation-balancer.html",
+        "category": "\ud83d\udcda Educational Tools",
+        "status": "published"
+    },
+    {
+        "title": "Probability Calculator",
+        "link": "Educational Tools\/Probability-Calculator.html",
+        "category": "CALCULATOR",
+        "status": "published"
+    },
+    {
+        "title": "IMAGE WATERMARK",
+        "link": "imgwatermarking\/index.html",
+        "category": "IMAGE TOOLS",
+        "status": "published"
+    },
+    {
+        "title": "Image Background Remover",
+        "link": "imgbgremover\/index.html",
+        "category": "IMAGE TOOLS",
+        "status": "published"
+    },
+    {
+        "title": "IMAGE UPSCALER",
+        "link": "IMAGE\/Image-Upscaler.html",
+        "category": "IMAGE TOOLS",
+        "status": "published"
+    },
+    {
+        "title": "Colour Code Converter",
+        "link": "color-code-converter\/index.php",
+        "category": "UTILITY TOOLS",
+        "status": "published"
+    },
+    {
+        "title": "Video to MP3",
+        "link": "Audio & Video Tools\/Video-to-MP3-Converter.html",
+        "category": "Audio & Video Tools",
+        "status": "published"
+    },
+    {
+        "title": "MP3 \u2194 WAV Converter",
+        "link": "Audio & Video Tools\/MP3-to-WAV-WAV-to-MP3-Converter.html",
+        "category": "Audio & Video Tools",
+        "status": "published"
+    },
+    {
+        "title": "MP3 Cutter",
+        "link": "Audio & Video Tools\/MP3-Cutter-Audio-Trimmer-tool.html",
+        "category": "Audio & Video Tools",
+        "status": "published"
+    },
+    {
+        "title": "Video Resizer \/ Cropper",
+        "link": "Audio & Video Tools\/Video-Resizer-Cropper.html",
+        "category": "Audio & Video Tools",
+        "status": "published"
+    },
+    {
+        "title": "Screen Recorder",
+        "link": "Audio & Video Tools\/Screen-Recorder.html",
+        "category": "Audio & Video Tools",
+        "status": "published"
+    },
+    {
+        "title": "Free Online TTS",
+        "link": "Audio & Video Tools\/Text-to-Speech.html",
+        "category": "Audio & Video Tools",
+        "status": "published"
+    },
+    {
+        "title": "SPLIT PDF",
+        "link": "PDF\/Splitpdf.html",
+        "category": "PDF TOOLS",
+        "status": "published"
+    },
+    {
+        "title": "MERGE PDF",
+        "link": "PDF\/Mergepdf.html",
+        "category": "PDF TOOLS",
+        "status": "published"
+    },
+    {
+        "title": "PDF TO IMAGE",
+        "link": "PDF\/Pdftoimg.html",
+        "category": "PDF TOOLS",
+        "status": "published"
+    },
+    {
+        "title": "IMAGE TO PDF",
+        "link": "PDF\/Imgtopdf.html",
+        "category": "PDF TOOLS",
+        "status": "published"
+    },
+    {
+        "title": "Compress PDF",
+        "link": "PDF\/Pdfcompressor.html",
+        "category": "PDF TOOLS",
+        "status": "published"
+    },
+    {
+        "title": "WORD TO PDF",
+        "link": "PDF\/Wordtopdf.html",
+        "category": "PDF TOOLS",
+        "status": "published"
+    },
+    {
+        "title": "Unlock PDF",
+        "link": "PDF\/unlockpdf.html",
+        "category": "PDF TOOLS",
+        "status": "published"
+    },
+    {
+        "title": "PDF TO WORD",
+        "link": "PDF\/Pdftoword.html",
+        "category": "PDF TOOLS",
+        "status": "published"
+    },
+    {
+        "title": "1 MB PDF COMPRESSOR",
+        "link": "HIGH COMPRESS\/1mb-pdf-compress.html",
+        "category": "HIGH COMPRESSOR",
+        "status": "published"
+    },
+    {
+        "title": "20 KB IMAGE COMPRESSOR",
+        "link": "HIGH COMPRESS\/20kb-image-compress.html",
+        "category": "HIGH COMPRESSOR",
+        "status": "published"
+    },
+    {
+        "title": "PDF TO EXCEL",
+        "link": "PDF\/Pdftoexcel.html",
+        "category": "PDF TOOLS",
+        "status": "published"
+    },
+    {
+        "title": "LOCK PDF",
+        "link": "PDF\/lockpdf.html",
+        "category": "PDF TOOLS",
+        "status": "published"
+    },
+    {
+        "title": "EXCEL TO PDF",
+        "link": "PDF\/exceltopdf.html",
+        "category": "PDF TOOLS",
+        "status": "published"
+    },
+    {
+        "title": "Organize PDF",
+        "link": "PDF\/organize-pdf.html",
+        "category": "PDF TOOLS",
+        "status": "published"
+    },
+    {
+        "title": "Repair PDF",
+        "link": "PDF\/repair-pdf.html",
+        "category": "PDF TOOLS",
+        "status": "published"
+    },
+    {
+        "title": "JIRO-AI EXPLAINER",
+        "link": "https:\/\/ai.earncolour.xyz\/J1R0-AI-EXPAIN-IT\/JIRO-AI-EXPLAIN-IT.html",
+        "category": "\ud83e\udd16 AI Tools",
+        "status": "published"
+    },
+    {
+        "title": "JIRO-AI NOTES MAKER",
+        "link": "https:\/\/ai.earncolour.xyz\/notes-maker-ai.html",
+        "category": "\ud83e\udd16 AI Tools",
+        "status": "published"
+    },
+    {
+        "title": "BLUR TOOL",
+        "link": "IMAGE\/image-background-blur.html",
+        "category": "IMAGE TOOLS",
+        "status": "published"
+    },
+    {
+        "title": "ENGLISH GRAMMER - VOICE",
+        "link": "ppt-maker\/index.html",
+        "category": "EDUCATIONAL CONTENT",
+        "status": "published"
+    },
+    {
+        "title": "ENGLISH GRAMMER - VOICE",
+        "link": "ppt-maker\/index.html",
+        "category": "\ud83d\udcda Educational Tools",
+        "status": "published"
+    },
+    {
+        "title": "TENSES",
+        "link": "Educational Tools\/TENSES\/index.html",
+        "category": "\ud83d\udcda Educational Tools",
+        "status": "published"
+    },
+    {
+        "title": "IMAGE SPLITTER",
+        "link": "IMAGE\/Image-Splitter.html",
+        "category": "IMAGE TOOLS",
+        "status": "published"
+    },
+    {
+        "title": "Online Date & Time Difference Calculator",
+        "link": "Utility Tools\/OnlinDate-Time-Difference-Calculator.html",
+        "category": "CALCULATOR",
+        "status": "published"
+    },
+    {
+        "title": "AREA CALCULATOR",
+        "link": "Educational Tools\/Area-calculator.html",
+        "category": "CALCULATOR",
+        "status": "published"
+    },
+    {
+        "title": "TYPING SPEED TEST",
+        "link": "\/Educational Tools\/typing-speed-test.html",
+        "category": "\ud83d\udcda Educational Tools",
+        "status": "published"
+    },
+    {
+        "title": "\ud83d\udee0 Remove Extra Spaces",
+        "link": "DOCUMENTS\/Remove-Extra-Spaces-Tool-html",
+        "category": "DOCUMENTS",
+        "status": "published"
+    },
+    {
+        "title": "Immediate-Annuity-Calculator",
+        "link": "Financial Calculators\/Immediate-Annuity-Calculator.html",
+        "category": "FINANCIAL CALCULATORS",
+        "status": "published"
+    },
+    {
+        "title": "Present Value of Annuity Due Calculator",
+        "link": "Financial Calculators\/Present Value-of-Annuity-Due-Calculator.html",
+        "category": "FINANCIAL CALCULATORS",
+        "status": "published"
+    },
+    {
+        "title": "Present Value of Annuity Calculator",
+        "link": "Financial Calculators\/Present-Value-of-Annuity-Calculator.html",
+        "category": "FINANCIAL CALCULATORS",
+        "status": "published"
+    },
+    {
+        "title": "Present Value of Growing Annuity Calculator",
+        "link": "Financial Calculators\/Present-Value-of-Growing-Annuity-Calculator.html",
+        "category": "FINANCIAL CALCULATORS",
+        "status": "published"
+    },
+    {
+        "title": "PVIFA Calculator (High Precision)",
+        "link": "Financial Calculators\/PVIFA-Calculator-High-Precision.html",
+        "category": "FINANCIAL CALCULATORS",
+        "status": "published"
+    },
+    {
+        "title": "CPC CALCULATOR ",
+        "link": "Web Master\/Cpc-calculator.html",
+        "category": "WEBMASTER",
+        "status": "published"
+    },
+    {
+        "title": "CPM CALCULATOR ",
+        "link": "Web Master\/Cpm-calculator.html",
+        "category": "WEBMASTER",
+        "status": "published"
+    },
+    {
+        "title": "AdSense Calculator ",
+        "link": "Web Master\/Adsense-calculator.html",
+        "category": "WEBMASTER",
+        "status": "published"
+    },
+    {
+        "title": "At Bats per Home Run Calculato",
+        "link": "SPORTS\/ BASEBALL\/At-Bats-per-Home-Run-Calculator.html",
+        "category": "SPORTS-BASEBALL",
+        "status": "published"
+    },
+    {
+        "title": "Batting Average Calculator",
+        "link": "SPORTS\/ BASEBALL\/Batting-Average-Calculator.html",
+        "category": "SPORTS-BASEBALL",
+        "status": "published"
+    },
+    {
+        "title": "ERA Calculator",
+        "link": "SPORTS\/ BASEBALL\/ERA-Calculator.html",
+        "category": "SPORTS-BASEBALL",
+        "status": "published"
+    },
+    {
+        "title": "Field Goal Percentage Calculator",
+        "link": "SPORTS\/ BASEBALL\/Field-Goal-Percentage-Calculator.html",
+        "category": "SPORTS-BASEBALL",
+        "status": "published"
+    },
+    {
+        "title": "FIP Calculator",
+        "link": "SPORTS\/ BASEBALL\/FIP-Calculator.html",
+        "category": "SPORTS-BASEBALL",
+        "status": "published"
+    },
+    {
+        "title": "On Base Percentage Calculator",
+        "link": "SPORTS\/ BASEBALL\/On-Base-Percentage-Calculator.html",
+        "category": "SPORTS-BASEBALL",
+        "status": "published"
+    },
+    {
+        "title": "OPS Calculator",
+        "link": "SPORTS\/ BASEBALL\/OPS-Calculator.html",
+        "category": "SPORTS-BASEBALL",
+        "status": "published"
+    },
+    {
+        "title": "Slugging Percentage Calculator",
+        "link": "SPORTS\/ BASEBALL\/Slugging-Percentage-Calculator.html",
+        "category": "SPORTS-BASEBALL",
+        "status": "published"
+    },
+    {
+        "title": "Strikeout-to-Walk Ratio Calculator",
+        "link": "SPORTS\/ BASEBALL\/Strikeout-to-Walk-Ratio-Calculator.html",
+        "category": "SPORTS-BASEBALL",
+        "status": "published"
+    },
+    {
+        "title": "Total Bases Calculator",
+        "link": "SPORTS\/ BASEBALL\/Total-Bases-Calculator.html",
+        "category": "SPORTS-BASEBALL",
+        "status": "published"
+    },
+    {
+        "title": "WAR Calculator",
+        "link": "SPORTS\/ BASEBALL\/WAR-Calculator.html",
+        "category": "SPORTS-BASEBALL",
+        "status": "published"
+    },
+    {
+        "title": "WHIP Calculator",
+        "link": "SPORTS\/ BASEBALL\/WHIP-Calculator.html",
+        "category": "SPORTS-BASEBALL",
+        "status": "published"
+    },
+    {
+        "title": "Effective Field Goal Percentage Calculator",
+        "link": "SPORTS\/BASKETBALL\/Effective-Field-Goal-Percentage-Calculator.html",
+        "category": "SPORTS-BASKETBALL",
+        "status": "published"
+    },
+    {
+        "title": "PER Calculator",
+        "link": "SPORTS\/BASKETBALL\/PER-Calculator.html",
+        "category": "SPORTS-BASKETBALL",
+        "status": "published"
+    },
+    {
+        "title": "Rebound Rate Calculator",
+        "link": "SPORTS\/BASKETBALL\/Rebound-Rate-Calculator.html",
+        "category": "SPORTS-BASKETBALL",
+        "status": "published"
+    },
+    {
+        "title": "True Shooting Percentage Calculator",
+        "link": "SPORTS\/BASKETBALL\/True-Shooting-Percentage-Calculator.html",
+        "category": "SPORTS-BASKETBALL",
+        "status": "published"
+    },
+    {
+        "title": "Usage Rate Calculator",
+        "link": "SPORTS\/BASKETBALL\/Usage-Rate-Calculator.html",
+        "category": "SPORTS-BASKETBALL",
+        "status": "published"
+    },
+    {
+        "title": "Batting Average Calculator",
+        "link": "SPORTS\/CRICKET\/Batting-Average-Calculator.html",
+        "category": "SPORTS-CRICKET",
+        "status": "published"
+    },
+    {
+        "title": "Strike Rate Calculator",
+        "link": "SPORTS\/CRICKET\/Strike-Rate-Calculator.html",
+        "category": "SPORTS-CRICKET",
+        "status": "published"
+    },
+    {
+        "title": "Bowling Average Calculator",
+        "link": "SPORTS\/CRICKET\/Bowling-Average-Calculator.html",
+        "category": "SPORTS-CRICKET",
+        "status": "published"
+    },
+    {
+        "title": "Economy Rate Calculator",
+        "link": "SPORTS\/CRICKET\/Economy-Rate-Calculator.html",
+        "category": "SPORTS-CRICKET",
+        "status": "published"
+    },
+    {
+        "title": "Bowling Strike Rate Calculator",
+        "link": "SPORTS\/CRICKET\/Bowling-Strike-Rate-Calculator.html",
+        "category": "SPORTS-CRICKET",
+        "status": "published"
+    },
+    {
+        "title": "Run Rate Calculator",
+        "link": "SPORTS\/CRICKET\/Run-Rate-Calculator.html",
+        "category": "SPORTS-CRICKET",
+        "status": "published"
+    },
+    {
+        "title": "Required Run Rate Calculator",
+        "link": "SPORTS\/CRICKET\/Required-Run-Rate-Calculator.html",
+        "category": "SPORTS-CRICKET",
+        "status": "published"
+    },
+    {
+        "title": "Fantasy Points Calculator",
+        "link": "SPORTS\/CRICKET\/Fantasy-Points-Calculator.html",
+        "category": "SPORTS-CRICKET",
+        "status": "published"
+    },
+    {
+        "title": "Conception Date Calculator",
+        "link": "HEALTH AND FITNESS\/Conception-Date-Calculator.html",
+        "category": "HEALTH AND FITNESS",
+        "status": "published"
+    },
+    {
+        "title": "Fertility Calculator",
+        "link": "HEALTH AND FITNESS\/Fertility-Calculator.html",
+        "category": "HEALTH AND FITNESS",
+        "status": "published"
+    },
+    {
+        "title": "Menstrual Cycle Calculator",
+        "link": "HEALTH AND FITNESS\/Menstrual-Cycle-Calculator.html",
+        "category": "HEALTH AND FITNESS",
+        "status": "published"
+    },
+    {
+        "title": "Menstrual Cycle Length Calculator",
+        "link": "HEALTH AND FITNESS\/Menstrual-Cycle-Length-Calculator.html",
+        "category": "HEALTH AND FITNESS",
+        "status": "published"
+    },
+    {
+        "title": "Ovulation-Calculator",
+        "link": "HEALTH AND FITNESS\/Ovulation-Calculator.html",
+        "category": "HEALTH AND FITNESS",
+        "status": "published"
+    },
+    {
+        "title": "Bench Press Calculator",
+        "link": "HEALTH AND FITNESS\/Bench-Press-Calculator.html",
+        "category": "HEALTH AND FITNESS",
+        "status": "published"
+    },
+    {
+        "title": "BMR Calculator",
+        "link": "HEALTH AND FITNESS\/BMR-Calculator.html",
+        "category": "HEALTH AND FITNESS",
+        "status": "published"
+    },
+    {
+        "title": "Body Fat Percentage Calculator",
+        "link": "HEALTH AND FITNESS\/Body-Fat-Percentage-Calculator.html",
+        "category": "HEALTH AND FITNESS",
+        "status": "published"
+    },
+    {
+        "title": "Calorie Burned Calculator",
+        "link": "HEALTH AND FITNESS\/Calorie-Burned-Calculator.html",
+        "category": "HEALTH AND FITNESS",
+        "status": "published"
+    },
+    {
+        "title": "Calorie Deficit Calculator",
+        "link": "HEALTH AND FITNESS\/Calorie-Deficit-Calculator.html",
+        "category": "HEALTH AND FITNESS",
+        "status": "published"
+    },
+    {
+        "title": "Max Heart Rate Calculator",
+        "link": "HEALTH AND FITNESS\/Max-Heart-Rate-Calculator.html",
+        "category": "HEALTH AND FITNESS",
+        "status": "published"
+    },
+    {
+        "title": "One Rep Max (1RM) Calculator",
+        "link": "HEALTH AND FITNESS\/One-Rep-Max-Calculator.html",
+        "category": "HEALTH AND FITNESS",
+        "status": "published"
+    },
+    {
+        "title": "Running Pace Calculator",
+        "link": "HEALTH AND FITNESS\/Running-Pace-Calculator.html",
+        "category": "HEALTH AND FITNESS",
+        "status": "published"
+    },
+    {
+        "title": "Target Heart Rate Calculator",
+        "link": "HEALTH AND FITNESS\/Target-Heart-Rate-Calculator.html",
+        "category": "HEALTH AND FITNESS",
+        "status": "published"
+    },
+    {
+        "title": "Am I Overweight",
+        "link": "HEALTH AND FITNESS\/Am-I-Overweight.html",
+        "category": "HEALTH AND FITNESS",
+        "status": "published"
+    },
+    {
+        "title": "Am I Underweight?",
+        "link": "HEALTH AND FITNESS\/Am-I-Underweight.html",
+        "category": "HEALTH AND FITNESS",
+        "status": "published"
+    },
+    {
+        "title": "BMI Calculator",
+        "link": "HEALTH AND FITNESS\/BMI-Calculator.html",
+        "category": "HEALTH AND FITNESS",
+        "status": "published"
+    },
+    {
+        "title": "How Much Should I Weigh?",
+        "link": "HEALTH AND FITNESS\/How-Much-Should-I-Weigh.html",
+        "category": "HEALTH AND FITNESS",
+        "status": "published"
+    },
+    {
+        "title": "Waist to Hip Ratio Calculator",
+        "link": "HEALTH AND FITNESS\/Waist-to-Hip-Ratio-Calculator.html",
+        "category": "HEALTH AND FITNESS",
+        "status": "published"
+    },
+    {
+        "title": "What Should I Weigh?",
+        "link": "HEALTH AND FITNESS\/What-Should-I-Weigh.html",
+        "category": "HEALTH AND FITNESS",
+        "status": "published"
+    },
+    {
+        "title": "Bra Size Calculator",
+        "link": "HEALTH AND FITNESS\/bra-size-calculator.html",
+        "category": "HEALTH AND FITNESS",
+        "status": "published"
+    },
+    {
+        "title": "Waist-to-Height Ratio (WHtR) Calculator",
+        "link": "HEALTH AND FITNESS\/WHtR-Calculator.html",
+        "category": "HEALTH AND FITNESS",
+        "status": "published"
+    },
+    {
+        "title": "Due Date Calculator - Find out when your baby is due.",
+        "link": "HEALTH AND FITNESS\/Due-Date-Calculator.html",
+        "category": "HEALTH AND FITNESS",
+        "status": "published"
+    },
+    {
+        "title": "How Many Weeks Pregnant Am I?",
+        "link": "HEALTH AND FITNESS\/How-Many-Weeks-Pregnant-Am-I.html",
+        "category": "HEALTH AND FITNESS",
+        "status": "published"
+    },
+    {
+        "title": "Pregnancy Calendar - Create your own daily pregnancy calendar.",
+        "link": "HEALTH AND FITNESS\/Pregnancy-Calendar.html",
+        "category": "HEALTH AND FITNESS",
+        "status": "published"
+    },
+    {
+        "title": "Bond Equivalent Yield Calculator",
+        "link": "Financial Calculators\/Bond-Equivalent-Yield-Calculator.html",
+        "category": "FINANCIAL CALCULATORS",
+        "status": "published"
+    },
+    {
+        "title": "Bond Yield Calculator",
+        "link": "Financial Calculators\/Bond-Yield-Calculator.html",
+        "category": "FINANCIAL CALCULATORS",
+        "status": "published"
+    },
+    {
+        "title": "Bond Yield to Maturity Calculator",
+        "link": "Financial Calculators\/Bond-Yield-to-Maturity-Calculator.html",
+        "category": "FINANCIAL CALCULATORS",
+        "status": "published"
+    },
+    {
+        "title": "Zero Coupon Bond Calculator",
+        "link": "Financial Calculators\/Zero-Coupon-Bond-Calculator.html",
+        "category": "FINANCIAL CALCULATORS",
+        "status": "published"
+    },
+    {
+        "title": "Car Loan EMI Calculator",
+        "link": "Financial Calculators\/car-loan-calculator.html",
+        "category": "FINANCIAL CALCULATORS",
+        "status": "published"
+    },
+    {
+        "title": "Home Loan EMI Calculator",
+        "link": "Financial Calculators\/home-loan-calculator.html",
+        "category": "FINANCIAL CALCULATORS",
+        "status": "published"
+    },
+    {
+        "title": "Home Equity Loan Calculator",
+        "link": "Financial Calculators\/home-equity-loan-calculator.html",
+        "category": "FINANCIAL CALCULATORS",
+        "status": "published"
+    },
+    {
+        "title": "Reverse Mortgage Calculator",
+        "link": "Financial Calculators\/Reverse-mortgage-calculator.html",
+        "category": "FINANCIAL CALCULATORS",
+        "status": "published"
+    },
+    {
+        "title": "Personal Loan EMI Calculator",
+        "link": "Financial Calculators\/Personal-Loan-Calculator.html",
+        "category": "FINANCIAL CALCULATORS",
+        "status": "published"
+    },
+    {
+        "title": "Retirement Calculator",
+        "link": "Financial Calculators\/retirement-calculator.html",
+        "category": "FINANCIAL CALCULATORS",
+        "status": "published"
+    },
+    {
+        "title": "Amortization Calculator",
+        "link": "Financial Calculators\/amortization-calculator.html",
+        "category": "FINANCIAL CALCULATORS",
+        "status": "published"
+    },
+    {
+        "title": "Borrowing Power Calculator",
+        "link": "Financial Calculators\/borrowing-power-calculator.html",
+        "category": "FINANCIAL CALCULATORS",
+        "status": "published"
+    },
+    {
+        "title": "Mutual Fund Calculator",
+        "link": "Financial Calculators\/mutual-fund-calculator.html",
+        "category": "FINANCIAL CALCULATORS",
+        "status": "published"
+    },
+    {
+        "title": "APY Calculator",
+        "link": "Financial Calculators\/apy-calculator.html",
+        "category": "FINANCIAL CALCULATORS",
+        "status": "published"
+    },
+    {
+        "title": "Pension Calculator",
+        "link": "Financial Calculators\/pension-calculator.html",
+        "category": "FINANCIAL CALCULATORS",
+        "status": "published"
+    },
+    {
+        "title": "Meta Tag Generator",
+        "link": "Web Master\/Meta-tag-generator.html",
+        "category": "WEBMASTER",
+        "status": "published"
+    },
+    {
+        "title": "FIND AND REPLACE TEXT",
+        "link": "DOCUMENTS\/find-replace-text.html",
+        "category": "DOCUMENTS",
+        "status": "published"
+    },
+    {
+        "title": "Create Transparent Images",
+        "link": "IMAGE\/transparent-image.html",
+        "category": "IMAGE TOOLS",
+        "status": "published"
+    },
+    {
+        "title": "Social Media Image Resizer",
+        "link": "MAGE\/social-media-image-resizer.html",
+        "category": "IMAGE TOOLS",
+        "status": "published"
+    },
+    {
+        "title": "PNG Color Replacer",
+        "link": "IMAGE\/png-color-replacer.html",
+        "category": "IMAGE TOOLS",
+        "status": "published"
+    },
+    {
+        "title": "PNG Color Tone Changer",
+        "link": "IMAGE\/png-color-tone-changer.html",
+        "category": "IMAGE TOOLS",
+        "status": "published"
+    },
+    {
+        "title": "Add Date to Photos \u2014 Bulk",
+        "link": "IMAGE\/add-date-bulk.html",
+        "category": "IMAGE TOOLS",
+        "status": "published"
+    },
+    {
+        "title": " Domain Availability Checker",
+        "link": "Web Master\/domain-availability-checker\/index.php",
+        "category": "WEBMASTER",
+        "status": "published"
+    },
+    {
+        "title": "Digital Diary App",
+        "link": "Utility Tools\/diary-app\/index.php",
+        "category": "UTILITY TOOLS",
+        "status": "published"
+    },
+    {
+        "title": "Text Hashing Tool",
+        "link": "Web Master\/text-hashing-tool\/index.html",
+        "category": "WEBMASTER",
+        "status": "published"
+    },
+    {
+        "title": "Virtual Drum Kit",
+        "link": "Fun\/virtual-drum-kit\/index.html",
+        "category": "FUN",
+        "status": "published"
+    },
+    {
+        "title": "Universal Length Converter",
+        "link": "Educational Tools\/universal-length-converter.html",
+        "category": "CALCULATOR",
+        "status": "published"
+    },
+    {
+        "title": "SpeedTest Pro | Website Performance Analyzer",
+        "link": "Web Master\/website-speed-tester\/index.php",
+        "category": "WEBMASTER",
+        "status": "published"
+    },
+    {
+        "title": "FLIP A COIN",
+        "link": "Fun\/flip-coin.html",
+        "category": "FUN",
+        "status": "published"
+    },
+    {
+        "title": "ID Photo Print Layout",
+        "link": "IMAGE\/id-photo-layout.html",
+        "category": "IMAGE TOOLS",
+        "status": "published"
+    },
+    {
+        "title": "Online Geo Tag Camera",
+        "link": "Audio & Video Tools\/geo-tag-camera.html",
+        "category": "Audio & Video Tools",
+        "status": "published"
+    },
+    {
+        "title": "Crypto Tax Estimator Canada",
+        "link": "Crypto\/Cryptocurrency_Tax_Estimator_Canada.html",
+        "category": "CRYPTO TAX CALCULATOR",
+        "status": "published"
+    },
+    {
+        "title": "Crypto Tax Estimator UK",
+        "link": "Cryptocurrency_Tax_UK.html",
+        "category": "CRYPTO TAX CALCULATOR",
+        "status": "published"
+    },
+    {
+        "title": "Crypto Tax Estimator USA",
+        "link": "Crypto\/Cryptocurrency_Tax_Estimator_USA.html",
+        "category": "CRYPTO TAX CALCULATOR",
+        "status": "published"
+    },
+    {
+        "title": "Crypto Tax Estimator INDIA",
+        "link": "Crypto\/India_crypto_tax_calculator.html",
+        "category": "CRYPTO TAX CALCULATOR",
+        "status": "published"
+    },
+    {
+        "title": "Crypto Tax Calculator Germany",
+        "link": "Crypto\/Crypto_Tax_Calculator_Germany.html",
+        "category": "CRYPTO TAX CALCULATOR",
+        "status": "published"
+    },
+    {
+        "title": "\tCrypto Tax Calculator Japan",
+        "link": "Crypto\/Crypto_Tax_Calculator_Japan.html",
+        "category": "CRYPTO TAX CALCULATOR",
+        "status": "published"
+    },
+    {
+        "title": "Crypto Tax Calculator France",
+        "link": "Crypto\/Crypto_Tax_Estimator_France.html",
+        "category": "CRYPTO TAX CALCULATOR",
+        "status": "published"
+    },
+    {
+        "title": "Crypto Tax Calculator Italy",
+        "link": "Crypto\/Crypto_Tax_Calculator_Italy.html",
+        "category": "CRYPTO TAX CALCULATOR",
+        "status": "published"
+    },
+    {
+        "title": "Crypto Tax Calculator Brazil",
+        "link": "Crypto\/Crypto_Tax_Calculator_Brazil.html",
+        "category": "CRYPTO TAX CALCULATOR",
+        "status": "published"
+    },
+    {
+        "title": "Crypto Tax Calculator South_Korea",
+        "link": "Crypto\/Crypto_Tax_Calculator_South_Korea.html",
+        "category": "CRYPTO TAX CALCULATOR",
+        "status": "published"
+    },
+    {
+        "title": "Cryptocurrency Tax Estimator Spain",
+        "link": "Crypto\/Crypto_Tax_Estimator_Spain.html",
+        "category": "CRYPTO TAX CALCULATOR",
+        "status": "published"
+    },
+    {
+        "title": "Cryptocurrency Tax Estimator  Australia ",
+        "link": "Crypto\/Crypto_Tax_Estimator_Australia.html",
+        "category": "CRYPTO TAX CALCULATOR",
+        "status": "published"
+    },
+    {
+        "title": "Crypto Tax Estimator Russia",
+        "link": "Crypto\/Crypto_Tax_Calculator_Russia.html",
+        "category": "CRYPTO TAX CALCULATOR",
+        "status": "published"
+    },
+    {
+        "title": "Crypto Tax Calculator Mexico",
+        "link": "Crypto\/Crypto_Tax_Calculator_Mexico.html",
+        "category": "CRYPTO TAX CALCULATOR",
+        "status": "published"
+    },
+    {
+        "title": "Crypto Tax Calculator Netherlands ",
+        "link": "Crypto\/Crypto_Tax_Calculator_Netherlands.html",
+        "category": "CRYPTO TAX CALCULATOR",
+        "status": "published"
+    },
+    {
+        "title": "Crypto Tax Calculator Indonesia",
+        "link": "Crypto\/Crypto_Tax_Calculator_Indonesia.html",
+        "category": "CRYPTO TAX CALCULATOR",
+        "status": "published"
+    },
+    {
+        "title": "Crypto Tax Calculator Saudi Arabia",
+        "link": "Crypto\/Crypto_Tax_Calculator_Saudi_Arabia.html",
+        "category": "CRYPTO TAX CALCULATOR",
+        "status": "published"
+    },
+    {
+        "title": "Crypto Tax Calculator Turkey",
+        "link": "Crypto\/Crypto_Tax_Calculator_Turkey.html",
+        "category": "CRYPTO TAX CALCULATOR",
+        "status": "published"
+    },
+    {
+        "title": "Crypto Tax Estimator Isreal",
+        "link": "Crypto\/Crypto_Tax_Calculator_Ireland.html",
+        "category": "CRYPTO TAX CALCULATOR",
+        "status": "published"
+    }
+]

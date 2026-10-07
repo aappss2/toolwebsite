@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Privacy Policy | JIRO</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Privacy Policy for JIRO, explaining data collection, use, security, and user rights." />
+  <meta name="theme-color" content="#0e0f12" />
+  <!-- Three.js CDN -->
+  <script src="https://unpkg.com/three@0.156.0/build/three.min.js" defer></script>
+  <style>
+    :root{
+      --bg:#0e0f12;
+      --panel:#0f1720;
+      --muted:#94a3b8;
+      --accent:#5b8cff;
+      --accent-2:#60a5fa;
+      --hot1:#ef4444;
+      --hot2:#f97316;
+      --glass: rgba(255,255,255,0.04);
+      --glass-2: rgba(91,140,255,0.06);
+      --shadow: 0 10px 30px rgba(2,6,23,0.7);
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      background: radial-gradient(1200px 500px at 10% 10%, rgba(91,140,255,0.06), transparent),
+                  linear-gradient(180deg, #07070a 0%, #0e0f12 100%);
+      color:#e6eef8;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      overflow-x: hidden;
+    }
+    header{
+      position:relative;
+      height:120px;
+      min-height:96px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      padding:12px 28px;
+      gap:20px;
+      z-index:5;
+      isolation:isolate;
+    }
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:14px;
+    }
+    .canvas-wrap{
+      width:86px;
+      height:86px;
+      border-radius:18px;
+      padding:6px;
+      background: linear-gradient(135deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      box-shadow: var(--shadow);
+      display:grid;
+      place-items:center;
+      backdrop-filter: blur(6px) saturate(120%);
+      -webkit-backdrop-filter: blur(6px) saturate(120%);
+      border: 1px solid rgba(255,255,255,0.03);
+    }
+    canvas{display:block; width:100%; height:100%; border-radius:12px; }
+    .brand h1{
+      font-size:1.15rem;
+      margin:0;
+      color:var(--accent);
+      letter-spacing:0.6px;
+      display:flex;
+      align-items:center;
+      gap:8px;
+    }
+    .brand h1 .logo-emoji { filter:drop-shadow(0 6px 18px rgba(91,140,255,0.12)); }
+    nav{
+      display:flex;
+      gap:16px;
+      align-items:center;
+    }
+    nav a{
+      color:#dbe9ff;
+      text-decoration:none;
+      font-weight:600;
+      padding:8px 12px;
+      border-radius:10px;
+      transition:all .18s ease;
+      outline: none;
+    }
+    nav a:focus{ box-shadow: 0 6px 20px rgba(91,140,255,0.12); transform: translateY(-2px); }
+    nav a:hover{ color:var(--accent-2); transform: translateY(-3px); }
+    .cta{
+      background: linear-gradient(90deg,var(--hot1), var(--hot2));
+      padding:8px 14px;
+      border-radius:12px;
+      color:#fff;
+      font-weight:700;
+      box-shadow: 0 8px 30px rgba(249,115,22,0.12);
+    }
+    main{
+      display:flex;
+      justify-content:center;
+      padding:36px 20px 80px;
+      gap:28px;
+    }
+    .content{ width:100%; max-width:960px; perspective: 1200px; transform-style: preserve-3d; }
+    .card{
+      background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      border-radius:16px;
+      padding:32px;
+      box-shadow: var(--shadow);
+      border: 1px solid rgba(91,140,255,0.06);
+      transform-origin:center;
+      transition: transform 0.18s ease, box-shadow .18s ease;
+      will-change: transform;
+      backdrop-filter: blur(8px) saturate(130%);
+    }
+    .card:hover{ box-shadow: 0 25px 60px rgba(2,6,23,0.85); }
+    h1,h2,h3{ color:var(--accent); margin-top:4px; }
+    h1{ font-size:1.8rem; margin-bottom:0; }
+    p,ul{ color: #cfe3ff; margin-bottom:12px; line-height:1.6 }
+    ul{ padding-left:20px; color:#cfe3ff }
+    footer{ margin-top:28px; font-size:0.9rem; color:var(--muted); text-align:center; border-top:1px solid rgba(255,255,255,0.02); padding-top:16px; }
+    .meta{ display:flex; gap:12px; align-items:center; color:var(--muted); font-size:0.95rem; margin-bottom:12px; }
+    .bg-shape{
+      position:fixed;
+      top:-8%;
+      right:-10%;
+      width:480px;
+      height:480px;
+      pointer-events:none;
+      background: radial-gradient(circle at 30% 30%, rgba(91,140,255,0.12), transparent 25%),
+                  conic-gradient(from 180deg at 50% 50%, rgba(96,165,250,0.06), transparent);
+      filter: blur(56px);
+      transform: rotate(14deg);
+      z-index:0;
+    }
+    .bg-shape-2{
+      position:fixed;
+      bottom:-6%;
+      left:-10%;
+      width:420px;
+      height:420px;
+      pointer-events:none;
+      background: radial-gradient(circle at 60% 60%, rgba(99,102,241,0.06), transparent 25%);
+      filter: blur(44px);
+      z-index:0;
+    }
+    @media (max-width:860px){
+      header{ padding:12px 18px; gap:12px; }
+      .brand h1{ font-size:1rem; }
+      .canvas-wrap{ width:66px; height:66px; border-radius:14px; }
+      .card{ padding:20px; border-radius:12px; }
+      main{ padding:24px 12px 60px; }
+    }
+    @media (prefers-reduced-motion: reduce){
+      .card, nav a { transition: none !important; }
+      canvas { animation: none !important; }
+    }
+  </style>
+</head>
+<body>
+  <div class="bg-shape" aria-hidden="true"></div>
+  <div class="bg-shape-2" aria-hidden="true"></div>
+
+  <header>
+    <div class="brand" aria-label="JIRO brand">
+      <div class="canvas-wrap" role="img" aria-hidden="false" aria-label="3D JIRO logo">
+        <canvas id="logoCanvas" tabindex="-1"></canvas>
+      </div>
+      <h1><span class="logo-emoji">🛠</span> JIRO</h1>
+    </div>
+
+    <nav aria-label="Primary navigation">
+      <a href="https://jdiro.com/">Home</a>
+      <a href="https://jdiro.com/aboutus.html">About</a>
+      <a href="https://jdiro.com/contact-us.html">Contact</a>
+      <a href="https://jdiro.com/privacy-policy.html" aria-current="page">Privacy</a>
+      <a href="https://jdiro.com/terms.html">Terms</a>
+      <a class="cta" href="https://jdiro.com/">Get Tools</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="content" aria-labelledby="privacy-title">
+      <article class="card" id="policy-card" role="article" tabindex="0" aria-labelledby="privacy-title">
+        <div class="meta">
+          <span>📣 Effective date:</span>
+          <time datetime="2025-08-23">August 23, 2025</time>
+        </div>
+
+        <h1 id="privacy-title">Privacy Policy</h1>
+
+        <p>At <strong>JIRO</strong> (“we,” “our,” or “us”), your privacy is a top priority. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit and use our website and tools.</p>
+
+        <h2>Information We Collect</h2>
+        <ul>
+          <li><strong>Usage Data:</strong> Anonymous analytics (pages visited, device/browser type) to improve performance.</li>
+          <li><strong>Input Data:</strong> Information you enter into our tools is processed to deliver the tool's function and is not stored beyond the session unless you choose to save it.</li>
+          <li><strong>Contact Info:</strong> If you contact us, we collect your email and name only to respond.</li>
+          <li><strong>Cookies:</strong> Minimal cookies for sessions and light analytics; no cross-site tracking.</li>
+        </ul>
+
+        <h2>How We Use Your Information</h2>
+        <ul>
+          <li>Provide, maintain, and improve our tools and website.</li>
+          <li>Personalize user experience and analyze usage patterns.</li>
+          <li>Respond to inquiries and send essential communications.</li>
+          <li>Protect the site and users from abuse or attacks.</li>
+        </ul>
+
+        <h2>Data Security & Retention</h2>
+        <p>We implement strong security practices. Whenever possible, sensitive inputs are processed client-side in your browser. Contact information is retained only as required to fulfill communications or legal obligations.</p>
+
+        <h2>Your Rights</h2>
+        <ul>
+          <li>Access and correct personal data where applicable.</li>
+          <li>Request deletion of personal data where feasible.</li>
+          <li>Opt-out of non-essential communications.</li>
+          <li>Withdraw any given consent at any time.</li>
+        </ul>
+
+        <h2>Third-Party Services</h2>
+        <p>We may use trusted third-party services for hosting and analytics. We do not share personal user content with third parties except when required by law or with your explicit consent.</p>
+
+        <h2>Children’s Privacy</h2>
+        <p>Our services are not directed to children under 13 and we do not knowingly collect data from them.</p>
+
+        <h2>Changes to This Policy</h2>
+        <p>We may update this policy. When we do, we will update the effective date and post the revised policy here.</p>
+
+        <h2>Contact Us</h2>
+        <p>If you have questions, contact us at <a href="mailto:admin@jdiro.com">admin@jdiro.com</a>.</p>
+
+        <footer>
+          &copy; 2025 JIRO. All rights reserved.
+        </footer>
+      </article>
+    </section>
+  </main>
+
+  <!-- JS for 3D Logo + Tilt -->
+  <script>
+    (function(){
+      const canvas = document.getElementById('logoCanvas');
+      if (!canvas) return;
+      function whenThreeReady(cb){
+        if (window.THREE) return cb();
+        const t = setInterval(()=>{ if(window.THREE){ clearInterval(t); cb(); } }, 50);
+        setTimeout(()=>{ clearInterval(t); cb(); }, 3000);
+      }
+      whenThreeReady(()=> {
+        try {
+          const THREE = window.THREE;
+          const scene = new THREE.Scene();
+          const renderer = new THREE.WebGLRenderer({canvas: canvas, alpha:true, antialias:true, powerPreference:'high-performance' });
+          renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1.5, 2));
+          renderer.setSize(canvas.clientWidth, canvas.clientHeight, false);
+          const camera = new THREE.PerspectiveCamera(45, canvas.clientWidth / canvas.clientHeight, 0.1, 100);
+          camera.position.set(0, 0, 3.2);
+          const light = new THREE.DirectionalLight(0xffffff, 1.0);
+          light.position.set(5,5,5);
+          scene.add(light);
+          scene.add(new THREE.AmbientLight(0xffffff, 0.35));
+          const torusGeo = new THREE.TorusKnotGeometry(0.6, 0.18, 120, 16, 2, 3);
+          const mat = new THREE.MeshStandardMaterial({ metalness: 0.6, roughness: 0.25, color: 0x5b8cff, emissive: 0x0a2b7a, emissiveIntensity: 0.6 });
+          const torus = new THREE.Mesh(torusGeo, mat);
+          scene.add(torus);
+          const inner = new THREE.Mesh(new THREE.SphereGeometry(0.22, 32,32), new THREE.MeshStandardMaterial({color:0xeaf4ff, metalness:0.2, roughness:0.3}));
+          scene.add(inner);
+          function resize(){ const w = canvas.clientWidth||86, h = canvas.clientHeight||86; renderer.setSize(w,h,false); camera.aspect=w/h; camera.updateProjectionMatrix(); }
+          resize(); new ResizeObserver(resize).observe(canvas);
+          let mx=0, my=0;
+          window.addEventListener('mousemove', e=>{ const r=canvas.getBoundingClientRect(); mx=((e.clientX-r.left)/r.width-0.5)*2; my=((e.clientY-r.top)/r.height-0.5)*2; }, {passive:true});
+          let t=0; function animate(){ t+=0.01; torus.rotation.x+=(-my*0.18-torus.rotation.x)*0.06; torus.rotation.y+=(mx*0.2-torus.rotation.y)*0.06; torus.rotation.z=Math.sin(t*0.6)*0.04; inner.rotation.y+=0.008; renderer.render(scene,camera); requestAnimationFrame(animate);} animate();
+        } catch(err){ canvas.style.background="linear-gradient(135deg,#0b1220,#09111a)"; }
+      });
+    })();
+    (function(){
+      const card=document.getElementById('policy-card'); if(!card) return; let b=card.getBoundingClientRect(); function update(){b=card.getBoundingClientRect();} window.addEventListener('resize',update,{passive:true});
+      card.addEventListener('mousemove',e=>{const px=(e.clientX-b.left)/b.width,py=(e.clientY-b.top)/b.height; card.style.transform=`rotateX(${(py-0.5)*-8}deg) rotateY(${(px-0.5)*12}deg) translateZ(14px)`;});
+      card.addEventListener('mouseleave',()=>card.style.transform='rotateX(0deg) rotateY(0deg) translateZ(0px)');
+    })();
+  </script>
+</body>
+</html>

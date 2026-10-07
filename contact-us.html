@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact Us | JIRO</title>
+  <meta name="description" content="Get in touch with JIRO for support, feedback, partnerships, and general inquiries." />
+
+  <!-- Tailwind + Fonts -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <!-- Three.js + GSAP -->
+  <script src="https://unpkg.com/three@0.153.0/build/three.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      background: linear-gradient(180deg,#0f172a 0%, #071126 100%);
+      color: #e6eef8;
+    }
+    .glass {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.08);
+      backdrop-filter: blur(8px) saturate(140%);
+      -webkit-backdrop-filter: blur(8px) saturate(140%);
+      box-shadow: 0 8px 30px rgba(2,6,23,0.6);
+      border-radius: 14px;
+    }
+    .tilt-card {
+      transform-style: preserve-3d;
+      transition: transform 250ms ease, box-shadow 250ms;
+      perspective: 1000px;
+    }
+    .tilt-card:hover {
+      box-shadow: 0 20px 40px rgba(2,6,23,0.6);
+    }
+    #heroCanvas {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+      width: 100%;
+      height: 260px;
+      pointer-events: none;
+    }
+  </style>
+</head>
+<body class="bg-gray-900">
+
+  <!-- Hero background -->
+  <canvas id="heroCanvas"></canvas>
+
+  <!-- Global Header -->
+  <header class="relative z-10 glass max-w-6xl mx-auto flex items-center justify-between px-4 py-3 mt-3">
+    <h1 class="text-2xl font-bold text-white">🛠 JIRO</h1>
+    <nav class="flex items-center gap-6 font-semibold text-white">
+      <a href="https://jdiro.com/" class="hover:text-yellow-400">Home</a>
+      <a href="https://jdiro.com/aboutus.html" class="hover:text-yellow-400">About Us</a>
+      <a href="https://jdiro.com/contact-us.html" class="hover:text-yellow-400">Contact Us</a>
+      <a href="https://jdiro.com/privacy-policy.html" class="hover:text-yellow-400">Privacy Policy</a>
+      <a href="https://jdiro.com/terms.html" class="hover:text-yellow-400">Terms</a>
+    </nav>
+  </header>
+
+  <!-- Content -->
+  <main class="relative z-10 max-w-6xl mx-auto px-4 mt-10 space-y-10">
+
+    <!-- Intro -->
+    <div class="glass p-6 rounded-2xl tilt-card">
+      <h1 class="text-3xl font-bold text-yellow-400">Contact JIRO</h1>
+      <p class="text-gray-300">Questions, ideas, or issues—reach out. We typically respond within 24–48 hours.</p>
+      <span class="inline-block mt-3 px-4 py-1 rounded-full bg-blue-500/20 text-blue-300 text-sm">Support · Feedback · Partnerships</span>
+    </div>
+
+    <!-- Form + Sidebar -->
+    <div class="grid md:grid-cols-3 gap-6">
+      <!-- Contact Form -->
+      <div class="glass p-6 rounded-2xl tilt-card md:col-span-2">
+        <h2 class="text-xl font-semibold mb-4">Send a Message</h2>
+        <form id="contactUsForm" action="https://formspree.io/f/your-endpoint" method="POST" class="space-y-4">
+          <div class="grid md:grid-cols-2 gap-4">
+            <div>
+              <label class="font-semibold">Full Name *</label>
+              <input type="text" name="name" required class="w-full p-3 rounded-lg bg-gray-800 border border-gray-700 text-white">
+            </div>
+            <div>
+              <label class="font-semibold">Email *</label>
+              <input type="email" name="email" required class="w-full p-3 rounded-lg bg-gray-800 border border-gray-700 text-white">
+            </div>
+          </div>
+          <div class="grid md:grid-cols-2 gap-4">
+            <div>
+              <label class="font-semibold">Topic</label>
+              <select name="topic" class="w-full p-3 rounded-lg bg-gray-800 border border-gray-700 text-white">
+                <option>Support</option><option>Feature Request</option>
+                <option>Bug Report</option><option>Partnership</option><option>Other</option>
+              </select>
+            </div>
+            <div>
+              <label class="font-semibold">Priority</label>
+              <select name="priority" class="w-full p-3 rounded-lg bg-gray-800 border border-gray-700 text-white">
+                <option>Normal</option><option>High</option><option>Low</option>
+              </select>
+            </div>
+          </div>
+          <div>
+            <label class="font-semibold">Message *</label>
+            <textarea name="message" required class="w-full p-3 rounded-lg bg-gray-800 border border-gray-700 text-white min-h-[140px]"></textarea>
+          </div>
+          <div>
+            <label class="font-semibold">Attachment</label>
+            <input type="file" name="attachment" accept=".png,.jpg,.jpeg,.pdf,.txt,.csv" class="w-full p-2 rounded-lg bg-gray-800 border border-gray-700 text-white">
+            <p class="text-sm text-gray-400">Max 10 MB. Don’t upload sensitive info.</p>
+          </div>
+          <div class="flex gap-4">
+            <button type="submit" class="px-5 py-3 rounded-lg bg-blue-500 text-white font-semibold">Send</button>
+            <button type="reset" class="px-5 py-3 rounded-lg bg-gray-700 text-gray-200 font-semibold">Clear</button>
+          </div>
+        </form>
+      </div>
+
+      <!-- Sidebar -->
+      <aside class="glass p-6 rounded-2xl tilt-card">
+        <h2 class="text-xl font-semibold mb-4">Direct Contact</h2>
+        <div class="space-y-3 text-sm text-gray-300">
+          <p><strong>Email:</strong> <a href="mailto:admin@jdiro.com" class="text-yellow-400">admin@jdiro.com</a></p>
+          <p><strong>Response:</strong> 24–48 business hours</p>
+          <p><strong>Availability:</strong> Mon–Fri, 9:00–18:00 IST</p>
+          <p><strong>Status:</strong> Check homepage for announcements if tools are down.</p>
+        </div>
+      </aside>
+    </div>
+
+    <!-- FAQs -->
+    <div class="glass p-6 rounded-2xl tilt-card">
+      <h2 class="text-xl font-semibold mb-4">Quick FAQs</h2>
+      <details class="mb-2">
+        <summary class="cursor-pointer font-semibold">Do I need an account?</summary>
+        <p class="text-gray-400">No—most tools work without sign-up. Some may need temporary permissions.</p>
+      </details>
+      <details class="mb-2">
+        <summary class="cursor-pointer font-semibold">How is my data handled?</summary>
+        <p class="text-gray-400">We minimize data collection and process files in-browser whenever possible.</p>
+      </details>
+      <details>
+        <summary class="cursor-pointer font-semibold">Can I request a feature?</summary>
+        <p class="text-gray-400">Yes! Use the form above and select “Feature Request.”</p>
+      </details>
+    </div>
+
+    <!-- Footer -->
+    <footer class="text-center text-gray-400 py-6 text-sm">
+      © <span id="year"></span> JIRO. All rights reserved.
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    document.querySelectorAll('.tilt-card').forEach(el => {
+      el.addEventListener('mousemove', e => {
+        const rect = el.getBoundingClientRect();
+        const x = (e.clientX - rect.left) / rect.width - 0.5;
+        const y = (e.clientY - rect.top) / rect.height - 0.5;
+        el.style.transform = `rotateX(${y*10}deg) rotateY(${x*-10}deg)`;
+      });
+      el.addEventListener('mouseleave', () => el.style.transform = '');
+    });
+
+    const canvas = document.getElementById('heroCanvas');
+    const renderer = new THREE.WebGLRenderer({ canvas, alpha: true });
+    renderer.setSize(canvas.clientWidth, canvas.clientHeight, false);
+    const scene = new THREE.Scene();
+    const camera = new THREE.PerspectiveCamera(45, canvas.clientWidth/canvas.clientHeight, 0.1, 100);
+    camera.position.z = 20;
+    const light = new THREE.PointLight(0xffffff, 1); 
+    light.position.set(10,10,10); 
+    scene.add(light);
+
+    const sphere = new THREE.Mesh(
+      new THREE.SphereGeometry(3,32,32),
+      new THREE.MeshStandardMaterial({ color:0x5b8cff, roughness:0.3 })
+    );
+    scene.add(sphere);
+
+    function animate(t){
+      requestAnimationFrame(animate);
+      sphere.rotation.y = t*0.0003;
+      renderer.render(scene,camera);
+    }
+    animate();
+  </script>
+</body>
+</html>
